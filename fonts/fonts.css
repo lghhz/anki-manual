@@ -99,9 +99,59 @@
   src: url('source-code-pro-v11-all-charsets-500.woff2') format('woff2');
 }
 
-/* source-han-serif-tc */
+/* source-han-serif-tw */
 @font-face {
   font-family: 'Source Han Serif';
-  src: url('SourceHanSerifTC.woff2') format('woff2-variations');
-  font-weight: 100 800;
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Han Serif Extra Light'), local('Source Han Serif-ExtraLight'),
+       url('SourceHanSerifTW-ExtraLight.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Han Serif Light'), local('Source Han Serif-Light'),
+       url('SourceHanSerifTW-Light.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Han Serif Regular'), local('Source Han Serif-Regular'),
+       url('SourceHanSerifTW-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Source Han Serif Medium'), local('Source Han Serif-Medium'),
+       url('SourceHanSerifTW-Medium.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Han Serif Semi Bold'), local('Source Han Serif-SemiBold'),
+       url('SourceHanSerifTW-SemiBold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Han Serif Bold'), local('Source Han Serif-Bold'),
+       url('SourceHanSerifTW-Bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Han Serif Heavy'), local('Source Han Serif-Heavy'),
+       url('SourceHanSerifTW-Heavy.otf') format('otf');
 }
