@@ -5,24 +5,25 @@
 ## Adding Cards and Notes
 
 Recall from the [basics](getting-started.md) that in Anki we add notes rather than
-cards, and Anki creates cards for us. Click 'Add' in the [main window](studying.md#decks),
+cards, and Anki creates cards for us. Click 'Add' in the [main window](studying.md#牌組-decks),
 and the Add Notes window will appear.
 
 ![Add Screen](media/add_screen.png)
 
-The top left of the window shows us the current [note type](getting-started.md#note-types). If it does
+The top left of the window shows us the current [note type](getting-started.md#筆記類型-note-types). If it does
 not say "Basic," then you may have added some note types when you
 downloaded a shared deck. The text below assumes that "Basic" is
 selected.
 
-The top right of the window shows us the [deck](getting-started.md#decks) cards will be added to. If
+The top right of the window shows us the [deck](getting-started.md#牌組-decks) cards will be added to. If
 you would like to add cards to a new deck, you can click on the deck name
 button and then click "Add".
 
 Below the note type, you'll see some buttons, and an area labelled
-"Front" and "Back". Front and Back are called [fields](getting-started.md#notes--fields), and you can add,
+"Front" and "Back". Front and Back are called [fields](getting-started.md#筆記--欄位-notes--fields), and you can add,
 remove, and rename them by clicking the "Fields…​" button above.
 
+Below the fields is another area labelled "**tags**". Tags are labels that
 Below the fields is another area labelled "**tags**". Tags are labels that
 you can attach to your notes, to make organizing and finding notes
 easier. You can leave the tags blank if you wish, or add one or more of
@@ -106,7 +107,7 @@ material that you are studying is a good choice here – things like "Japanese",
 "Trivia", and so on. Once you have chosen a name, close the Note Types
 window, and you will return to the adding window.
 
-## Customizing Fields
+## 自訂欄位 Customizing Fields
 
 To customize fields, click the "Fields…​" button when adding or editing
 a note, or while the note type is selected in the Manage Note Types
@@ -137,7 +138,7 @@ reviewing; for that, please see [templates](templates/intro.md).
   [templates](templates/intro.md) section. If you have enabled the "type in the
   answer" function, however, the text you type will use the font size
   defined here. (For information about how to change the actual font face
-  when typing the answer, please see the [checking your answer](templates/fields.md#checking-your-answer) section.)
+  when typing the answer, please see the [checking your answer](templates/fields.md#檢查答案-checking-your-answer) section.)
 
 - **Sort by this field…​** tells Anki to show this field in the Sort Field
   column of the browser. You can use this to sort cards by that field.
@@ -156,7 +157,7 @@ reviewing; for that, please see [templates](templates/intro.md).
   The animation can be disabled in the [preferences.](preferences.md)
 
 - **Exclude from unqualified searches (slower)** can be used if you want
-  the content of a certain field not to appear in unqualified [(not limited to a specific field)](searching.md#limiting-to-a-field)
+  the content of a certain field not to appear in unqualified [(not limited to a specific field)](searching.md#限制欄位-limiting-to-a-field)
   searches.
 
 After you have added fields, you will probably want to add them to the front
@@ -172,9 +173,9 @@ decks or manage your note types.
 
 ## Organizing Content
 
-### Using Decks Appropriately
+### 恰當運用牌組 Using Decks Appropriately
 
-[Decks](getting-started.md#decks) are designed to divide your content up into
+[Decks](getting-started.md#牌組-decks) are designed to divide your content up into
 broad categories that you wish to study separately, such as English, Geography,
 and so on. You may be tempted to create lots of little decks to keep your
 content organized, such as "my geography book chapter 1", or "food verbs", but
@@ -208,7 +209,7 @@ Some people prefer using decks and subdecks to keep their cards organized,
 but using tags have a big advantage over decks for that: you can add several
 tags to a single note, but a single card can only belong to one deck, which
 makes tags a more powerful and flexible categorization system than
-decks in most cases. You can also organize tags in trees [in the same way as you can do for decks](getting-started.md#decks).
+decks in most cases. You can also organize tags in trees [in the same way as you can do for decks](getting-started.md#牌組-decks).
 
 For example, instead of creating a "food verbs" deck, you could add those
 cards to your main language study deck, and tag the cards with "food" and
@@ -218,7 +219,7 @@ food-related vocabulary, or all verbs that are related to food.
 
 You can add tags from the Edit window and from the [Browser](browsing.md), and you can also add,
 delete, rename, or organize tags there. Please note that
-tags work at [note](getting-started.md#notes--fields) level, which means that when you tag a card that has siblings,
+tags work at [note](getting-started.md#筆記--欄位-notes--fields) level, which means that when you tag a card that has siblings,
 all the siblings will be tagged as well. If you need to tag a single card,
 but not its siblings, you should consider using flags instead.
 
@@ -229,7 +230,7 @@ window, showing a colored flag icon on the upper right area of the screen.
 You can also search for flagged cards in the Browse screen, rename flags
 from the browser and create filtered decks from flagged cards, but unlike tags,
 a single card can have only one flag at a time. Another important difference
-is that flags work at [card](getting-started.md#cards) level, so flagging a card that has siblings
+is that flags work at [card](getting-started.md#卡片-cards) level, so flagging a card that has siblings
 won't have any effect on the card's siblings.
 
 You can flag / unflag cards directly while in review mode (by pressing
@@ -273,7 +274,7 @@ The editor is shown when [adding notes](editing.md), [editing a note](studying.m
 
 ![Editor icons](media/editor_icons.png)
 
-On the top left are two buttons, which open the [fields](editing.md#customizing-fields) and
+On the top left are two buttons, which open the [fields](editing.md#自訂欄位-customizing-fields) and
 [cards](templates/intro.md) windows.
 
 On the right are buttons that control formatting. Bold, italic and
@@ -320,7 +321,7 @@ hold down the <kbd>Shift</kbd> key while pasting, Anki will strip most of the
 formatting. Under Preferences, you can toggle "Paste without shift
 key strips formatting" to modify the default behaviour.
 
-## Cloze Deletion
+## 克漏字空格 Cloze Deletion
 
 'Cloze deletion' is the process of hiding one or more words in a
 sentence. For example, if you have the sentence:
@@ -388,7 +389,7 @@ When the card comes up for review, it will appear as:
     [city] was founded in 1913.
 
 For information on testing your ability to type in a cloze deletion
-correctly, please see the section on [typing answers](templates/fields.md#checking-your-answer).
+correctly, please see the section on [typing answers](templates/fields.md#檢查答案-checking-your-answer).
 
 From version 2.1.56, nested cloze deletions are supported. For example, the following is valid:
 

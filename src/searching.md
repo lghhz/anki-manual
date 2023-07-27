@@ -1,11 +1,11 @@
-# Searching
+# 搜尋 Searching
 
 <!-- toc -->
 
 Anki's Browse screen and the Filtered Deck feature use a common method
 of searching for specific cards/notes.
 
-## Simple searches
+## 簡單搜尋 Simple searches
 
 When you type some text into the search box, Anki finds matching notes
 and displays their cards. Anki searches in all fields of the notes, but
@@ -81,7 +81,7 @@ Things to note from the above:
   parentheses, it matches either 'dog cat' or 'dog mouse', whereas
   without them it would match either 'dog and cat' or 'mouse'.
 
-- Anki is only able to search within formatting in the [sort field](editing.md#customizing-fields) you’ve configured. For example, if you add
+- Anki is only able to search within formatting in the [sort field](editing.md#自訂欄位-customizing-fields) you’ve configured. For example, if you add
   "**exa**mple" to one of your fields, this will not be matched when
   searching for "example" unless that field is the sort field. If a
   word is not formatted, or the formatting does not change in the
@@ -92,13 +92,13 @@ Things to note from the above:
   in a standard search, but can be made case insensitive by searching on a word
   boundary or regular expression (`w:`, `re:`).
 
-## Limiting to a field
+## 限制欄位 Limiting to a field
 
 You can also ask Anki to match only if a particular field contains some
 text. Unlike the searches above, searching on fields requires an 'exact
 match' by default.
 
-`front:dog`\
+`正面:dog`\
 find notes with a Front field of exactly "dog". A field that says "a
 dog" will not match.
 
@@ -106,20 +106,21 @@ dog" will not match.
 find notes where the "Animal Front" field is exactly "a dog". The double quotes are
 mandatory, see [below](#matching-special-characters).
 
-`front:*dog*`\
+`正面:*dog*`\
 find notes with Front field containing dog somewhere
 
 `front:`\
-find notes that have an empty Front field
+`正面:`  
+尋找「正面」欄位為空白的筆記
 
-`front:_*`\
-find notes that have a non-empty Front field
+`正面:_*`\
+尋找「正面」欄位不為空白的筆記
 
-`front:*`\
-find notes that have a Front field, empty or not
+`正面:*`\
+尋找擁有「正面」欄位的筆記，無論是否空白
 
-`fr*:text`\
-find notes in a field starting with "fr". Requires Anki 2.1.24+ or AnkiMobile 2.1.60+.
+`正*:text`\
+在名稱開頭為「正」的欄位中尋找筆記。僅支援在 Anki 2.1.24+ 或 AnkiMobile 2.1.60+ 版本上使用。
 
 ## Tags, decks, cards and notes
 
@@ -234,7 +235,7 @@ reviews (both due and not due) and lapsed cards
 cards that have been manually suspended
 
 `is:buried`\
-cards that have been buried, either [automatically](studying.md#siblings-and-burying) or
+cards that have been buried, either [automatically](studying.md#關聯卡片和暫停-siblings-and-burying) or
 manually
 
 Note that with the [new scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
@@ -382,7 +383,7 @@ you need to tell Anki not to treat them specially.
   Colons have to be escaped unless they are preceded by another, unescaped colon.
   So `w:e:b` is a word boundary search for `e:b`, `w\:e\:b` searches literally for
   `w:e:b` and `w\:e:b` searches the field `w:e` for `b` (see
-  [field searches](#limiting-to-a-field)).
+  [field searches](#限制欄位-limiting-to-a-field)).
 
 - `&`, `<`, and `>`\
   `&`, `<`, and `>` are treated as HTML when searching in Anki, and as such searches

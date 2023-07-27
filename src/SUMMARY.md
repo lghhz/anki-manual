@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](intro.md)
+[介紹 Introduction](intro.md)
 
 - [Background](background.md)
 - [Platform Notes](platform/intro.md)
@@ -24,8 +24,8 @@
     - [Incorrect GTK Theme](platform/linux/gtk-theme.md)
     - [Wayland](platform/linux/wayland.md)
     - [Input Methods](platform/linux/input-methods.md)
-- [Getting Started](getting-started.md)
-- [Studying](studying.md)
+- [新手入門 Getting Started](getting-started.md)
+- [學習 Studying](studying.md)
 - [Adding/Editing](editing.md)
 - [Card Templates](templates/intro.md)
   - [Field Replacements](templates/fields.md)
