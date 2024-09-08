@@ -1144,7 +1144,7 @@ instead.</p>
 <p>你可以在鍵盤上使用 <kbd>1</kbd>、<kbd>2</kbd>、<kbd>3</kbd> 和 <kbd>4</kbd> 鍵來選取各個按鈕，<kbd>1</kbd> 鍵為「<strong>重來</strong>」。按下<kbd>空白</kbd>鍵或 <kbd>Enter</kbd> 鍵會選取「<strong>良好</strong>」。</p>
 <p>如果沒有其他卡片可以顯示，Anki 會提前顯示卡片。若要保持完整的延遲時長，你可以在<a href="preferences.html">「偏好設定」&gt;「排程」&gt;「提前學習上限」</a>中進行調整。</p>
 <h2 id="複習-review-cards"><a class="header" href="#複習-review-cards">複習 Review Cards</a></h2>
-<p>當你學過的卡片需要複習時，有四個評價按鈕可以選擇：</p>
+<p>複習學過的卡片時，你可以選擇一個評價按鈕：</p>
 <ul>
 <li>
 <p><strong>重來 (Again)</strong> 表示回答錯誤，卡片未來將更常出現。即卡片被忘記 (lapse) 了。請參閱〈<a href="deck-options.html#%E5%BF%98%E8%A8%98-lapses">忘記</a>〉章節來進一步了解 Anki 如何處理忘記的複習卡。</p>
@@ -1168,7 +1168,7 @@ instead.</p>
 <p><a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 排程器</a>以後，數字表示的是<strong>卡片</strong>數量，因此數字永遠只會增加 1，即使還剩餘多個學習階段。</p>
 <p>顯示答案時，Anki 會在每個按鈕上方顯示下一次顯示卡片的預估時間。如果不想看到預估時間，可以在<a href="preferences.html">偏好設定</a>中停用。</p>
 <h2 id="錯差乘數-fuzz-factor"><a class="header" href="#錯差乘數-fuzz-factor">錯差乘數 Fuzz Factor</a></h2>
-<p>在複習卡上選取一個難易度按鈕的同時，Anki 會套用少許隨機「錯差」，防止當你為同一時間引入的卡片給出相同的評價以後，這些卡片在未來都一直在同一天出現。這些錯差只有在啟用 <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 排程器</a>時，才會體現在回答按鈕上，所以如果你使用的是較舊的版本，可能就是因此而導致你選取的按鈕與卡片的實際間隔有出入。</p>
+<p>按下難易度按鈕的同時，Anki 會為複習卡套用少許隨機的「錯差」，這樣你在相同時間按下相同按鈕的卡片未來就不會一直都在同一天出現。這些錯差只有在啟用 <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 排程器</a>時，才會體現在回答按鈕上，所以如果你使用的是較舊的版本，按鈕上的時間可能會跟卡片的實際間隔不一致。</p>
 <p>學習中的卡片也會被賦予最多 5 分鐘的額外延遲，以避免每次出現的順序都相同，但這一延遲不會體現在回答按鈕上。此功能無法被停用。</p>
 <h2 id="編輯和其他-editing-and-more"><a class="header" href="#編輯和其他-editing-and-more">「編輯」和「其他」 Editing and More</a></h2>
 <p>你可以按一下左下方的「<strong>編輯</strong>」按鈕來編輯當前筆記。編輯結束後則會繼續學習。編輯畫面與<a href="editing.html">新增筆記</a>畫面非常相似。</p>
@@ -1295,28 +1295,15 @@ instead.</p>
 <li><a href="editing.html#unicode-normalization">Unicode Normalization</a></li>
 </ul>
 <h2 id="adding-cards-and-notes"><a class="header" href="#adding-cards-and-notes">Adding Cards and Notes</a></h2>
-<p>Recall from the <a href="getting-started.html">basics</a> that in Anki we add notes rather than
-cards, and Anki creates cards for us. Click 'Add' in the <a href="studying.html#%E7%89%8C%E7%B5%84-decks">main window</a>,
-and the Add Notes window will appear.</p>
-<p><img src="media/add_screen.png" alt="Add Screen" /></p>
-<p>The top left of the window shows us the current <a href="getting-started.html#%E7%AD%86%E8%A8%98%E9%A1%9E%E5%9E%8B-note-types">note type</a>. If it does
-not say &quot;Basic,&quot; then you may have added some note types when you
-downloaded a shared deck. The text below assumes that &quot;Basic&quot; is
-selected.</p>
-<p>The top right of the window shows us the <a href="getting-started.html#%E7%89%8C%E7%B5%84-decks">deck</a> cards will be added to. If
-you would like to add cards to a new deck, you can click on the deck name
-button and then click &quot;Add&quot;.</p>
-<p>Below the note type, you'll see some buttons, and an area labelled
-&quot;Front&quot; and &quot;Back&quot;. Front and Back are called <a href="getting-started.html#%E7%AD%86%E8%A8%98--%E6%AC%84%E4%BD%8D-notes--fields">fields</a>, and you can add,
-remove, and rename them by clicking the &quot;Fields…​&quot; button above.</p>
-<p>Below the fields is another area labelled &quot;<strong>tags</strong>&quot;. Tags are labels that
-Below the fields is another area labelled &quot;<strong>tags</strong>&quot;. Tags are labels that
-you can attach to your notes, to make organizing and finding notes
-easier. You can leave the tags blank if you wish, or add one or more of
-them. Tags are separated by a space. If the tags area says</p>
+<p>回憶<a href="getting-started.html">基礎</a>，我們在 Anki 中我們加入的是「筆記」，建立卡片的任務被交給 Anki。在<a href="studying.html#%E7%89%8C%E7%B5%84-decks">主視窗</a>中按一下「新增」，就會出現新增筆記的視窗。</p>
+<p><img src="media/add_screen.png" alt="新增畫面" /></p>
+<p>視窗左上方顯示當前的「<a href="getting-started.html#%E7%AD%86%E8%A8%98%E9%A1%9E%E5%9E%8B-note-types">筆記類型</a>」。如果寫的不是「基本型（Basic）」，那可能是你下載了共用牌組，因而加入了一些筆記類型。以下說明以「基本型」為主。</p>
+<p>視窗右上方顯示卡片將被放入的<a href="getting-started.html#%E7%89%8C%E7%B5%84-decks">牌組</a>。要將卡片放入新牌組，請按一下牌組名稱按鈕，然後點選「新增」。</p>
+<p>筆記類型下方有一些按鈕，還有一個寫著「正面」和「背面」的區域。「正面」和「背面」是筆記的「<a href="getting-started.html#%E7%AD%86%E8%A8%98--%E6%AC%84%E4%BD%8D-notes--fields">欄位</a>」，你可以使用上方的「欄位...」按鈕來新增、移除或重新命名各欄位。</p>
+<p>欄位下方還有一個寫著「<strong>標籤</strong>」的區域。標籤是可以附加在欄位下方的標籤。你可以為筆記加上標籤，以便整理和尋找。如果不需要標籤則可以留空。標籤以半形空格分隔。如果標籤列寫著</p>
 <pre><code>vocab check_with_tutor
 </code></pre>
-<p>…​then the note you add would have two tags.</p>
+<p>則加入的筆記會有兩個標籤。</p>
 <p>When you have entered text into the front and back, you can click the
 &quot;Add&quot; button or press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (<kbd>Command</kbd>+<kbd>Enter</kbd> on a Mac) to add the
 note to your collection. When you do so, a card will be created as well,
