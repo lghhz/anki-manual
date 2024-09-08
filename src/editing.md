@@ -4,34 +4,21 @@
 
 ## Adding Cards and Notes
 
-Recall from the [basics](getting-started.md) that in Anki we add notes rather than
-cards, and Anki creates cards for us. Click 'Add' in the [main window](studying.md#牌組-decks),
-and the Add Notes window will appear.
+回憶[基礎](getting-started.md)，我們在 Anki 中我們加入的是「筆記」，建立卡片的任務被交給 Anki。在[主視窗](studying.md#牌組-decks)中按一下「新增」，就會出現新增筆記的視窗。
 
-![Add Screen](media/add_screen.png)
+![新增畫面](media/add_screen.png)
 
-The top left of the window shows us the current [note type](getting-started.md#筆記類型-note-types). If it does
-not say "Basic," then you may have added some note types when you
-downloaded a shared deck. The text below assumes that "Basic" is
-selected.
+視窗左上方顯示當前的「[筆記類型](getting-started.md#筆記類型-note-types)」。如果寫的不是「基本型（Basic）」，那可能是你下載了共用牌組，因而加入了一些筆記類型。以下說明以「基本型」為主。
 
-The top right of the window shows us the [deck](getting-started.md#牌組-decks) cards will be added to. If
-you would like to add cards to a new deck, you can click on the deck name
-button and then click "Add".
+視窗右上方顯示卡片將被放入的[牌組](getting-started.md#牌組-decks)。要將卡片放入新牌組，請按一下牌組名稱按鈕，然後點選「新增」。
 
-Below the note type, you'll see some buttons, and an area labelled
-"Front" and "Back". Front and Back are called [fields](getting-started.md#筆記--欄位-notes--fields), and you can add,
-remove, and rename them by clicking the "Fields…​" button above.
+筆記類型下方有一些按鈕，還有一個寫著「正面」和「背面」的區域。「正面」和「背面」是筆記的「[欄位](getting-started.md#筆記--欄位-notes--fields)」，你可以使用上方的「欄位...」按鈕來新增、移除或重新命名各欄位。
 
-Below the fields is another area labelled "**tags**". Tags are labels that
-Below the fields is another area labelled "**tags**". Tags are labels that
-you can attach to your notes, to make organizing and finding notes
-easier. You can leave the tags blank if you wish, or add one or more of
-them. Tags are separated by a space. If the tags area says
+欄位下方還有一個寫著「**標籤**」的區域。標籤是可以附加在欄位下方的標籤。你可以為筆記加上標籤，以便整理和尋找。如果不需要標籤則可以留空。標籤以半形空格分隔。如果標籤列寫著
 
     vocab check_with_tutor
 
-…​then the note you add would have two tags.
+則加入的筆記會有兩個標籤。
 
 When you have entered text into the front and back, you can click the
 "Add" button or press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (<kbd>Command</kbd>+<kbd>Enter</kbd> on a Mac) to add the
