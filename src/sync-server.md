@@ -1,7 +1,7 @@
 # Self-Hosted Sync Server
 
-Anki 2.1.57+ includes a built-in sync server. Advanced users who cannot or do
-not wish to use AnkiWeb can use this sync server instead of AnkiWeb.
+Advanced users who cannot or do not wish to use AnkiWeb can use a self-hosted
+sync server instead.
 
 Things to be aware of:
 
@@ -15,13 +15,17 @@ Things to be aware of:
   they tend to take time to catch up when the sync protocol changes, so they
   are not recommended.
 - The messages inside Anki will use the term 'AnkiWeb' even if a custom server
-  has been configured, (eg "Cannot connect to AnkiWeb" when your server is down).
+  has been configured, (e.g "Cannot connect to AnkiWeb" when your server is down).
 
 ## Installing/Running
 
-There are various ways you can install and run the server.
+There are various ways you can install and run the server. You can use either:
+- the sync server bundled with the desktop version of Anki
+- a separate minimal sync server that doesn't include Anki's GUI dependencies. Python and Rust implementations are available.
 
 ### From a Packaged Build
+
+This uses the sync server built into the desktop version of Anki as of version 2.1.57+.
 
 On Windows in a cmd.exe session:
 
@@ -44,8 +48,8 @@ SYNC_USER1=user:pass anki --syncserver
 
 ### With Pip
 
-If you have Python 3.9+ installed, you can run from PyPI without downloading
-all Anki's GUI dependencies.
+To avoid downloading desktop Anki's GUI dependencies, you can run a standalone Anki sync server using a Python package downloaded from PyPI instead.
+Make sure you have Python 3.9+ installed.
 
 ```
 python3 -m venv ~/syncserver
@@ -55,23 +59,22 @@ SYNC_USER1=user:pass ~/syncserver/bin/python -m anki.syncserver
 
 ### With Cargo
 
-If you have Rustup installed, from Anki 2.1.66+, you can build a standalone sync
-server that doesn't require Python, using the following:
+From Anki 2.1.66+, you can alternatively build a Rust implementation of the standalone sync server using the below command.
+Make sure you have Rustup installed.
 
 ```
 cargo install --git https://github.com/ankitects/anki.git --tag 2.1.66 anki-sync-server
 ```
 
+Replace 2.1.66 with whatever the latest Anki version is.
+
 Protobuf (protoc) will need to be installed.
 
-After running that, you can run it with
+After building, you can run it with:
 
 ```
-SYNC_USER1=user:pass anki-sync-server 
+SYNC_USER1=user:pass anki-sync-server
 ```
-
-Until 2.1.66 is released, you can replace `--tag 2.1.66` with `--branch main` to
-build from the current development code.
 
 ### From a source checkout
 
@@ -84,9 +87,21 @@ cargo install --path rslib/sync
 
 ## Multiple Users
 
-SYNC_USER1 declares the first user and password, and must be set.
-You can optionally declare SYNC_USER2, SYNC_USER3 and so on, if you
+`SYNC_USER1` declares the first user and password, and must be set.
+You can optionally declare `SYNC_USER2`, `SYNC_USER3` and so on, if you
 wish to set up multiple accounts.
+
+## Hashed Passwords
+
+Advanced users may wish to use hashed passwords instead of plain text
+passwords. If you wish to do this, you'll need to use a separate tool (such as
+[this one](https://git.sr.ht/~laalsaas/pbkdf2-password-hash)) to generate a
+password hash.  You can then tell the server to expect hashed passwords by
+setting the env var PASSWORDS_HASHED to 1 (or any other value).
+
+When hashed passwords are used, SYNC_USER variables are expected to be in
+username:password_hash format, where password_hash is a hash of the password in
+the PHC Format.
 
 ## Storage Location
 
@@ -110,17 +125,18 @@ that the server binds to.
 ## Client Setup
 
 You'll need to determine your computer's network IP address, and then
-point each of your Anki clients to the address, eg something like
+point each of your Anki clients to the address, e.g something like
 `http://192.168.1.200:8080/`. The URL can be configured in the preferences.
 
 If you're using AnkiMobile and are unable to connect to a server on your local
 network, please go into the iOS settings, locate Anki near the bottom, and
 toggle "Allow Anki to access local network" off and then on again.
 
-Older desktop clients required you to define SYNC_ENDPOINT and SYNC_ENDPOINT_MEDIA.
-If using an older client, you'd put it as e.g. `http://192.168.1.200:8080/sync/`
-and `http://192.168.1.200:8080/msync/` respectively. AnkiDroid also currently
-requires separate configuration for the two endpoints.
+Older desktop clients required you to define `SYNC_ENDPOINT` and
+`SYNC_ENDPOINT_MEDIA`.  If using an older client, you'd put it as e.g.
+`http://192.168.1.200:8080/sync/` and `http://192.168.1.200:8080/msync/`
+respectively. AnkiDroid clients before 2.16 require separate configuration for
+the two endpoints.
 
 ## Reverse Proxies
 
@@ -129,12 +145,15 @@ If using a reverse proxy to provide HTTPS access (e.g. nginx), and binding to a 
 including a trailing slash when configuring Anki. If you put `http://example.com/custom`
 instead, it will not work.
 
+On iOS, TLS 1.3 is not supported, so your reverse proxy will need to have TLS 1.2
+enabled, or you'll get an "error code -9836".
+
 ## Large Requests
 
 The standard AnkiWeb limit on uploads is applied by default. You can optionally
-set MAX_SYNC_PAYLOAD_MEGS to something greater than 100 if you wish to increase
-the limit. Bear in mind that if you're using a reverse proxy, you may need to
-adjust the limit there as well.
+set `MAX_SYNC_PAYLOAD_MEGS` to something greater than 100 if you wish to
+increase the limit. Bear in mind that if you're using a reverse proxy, you may
+need to adjust the limit there as well.
 
 ## Contributing Changes
 

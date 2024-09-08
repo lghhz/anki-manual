@@ -1,5 +1,6 @@
 [book]
 authors = ["Ankitects Pty Ltd and contributors"]
+description = "Anki 使用手冊。Anki 是一個閃卡程式，是你學習時的好幫手。"
 language = "zh-tw"
 multilingual = false
 src = "src"
@@ -21,7 +22,15 @@ additional-css = ["css/kbd.css"]
 optional = true
 warning-policy = "warn"
 follow-web-links = true
-exclude = ['microsoft.com', 'twitter.com']
+exclude = [
+  'microsoft.com',
+  'twitter.com',
+  'stackexchange.com',
+  'stackoverflow.com',
+  'https://github.com/open-spaced-repetition/fsrs4anki#add-on-compatibility',
+  'support.google.com',
+  'wikiwiki.jp',
+]
 
 [output.html.fold]
 enable = true
