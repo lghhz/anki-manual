@@ -4,7 +4,7 @@
 
 ## 新增卡片和筆記 Adding Cards and Notes
 
-回憶[基礎](getting-started.md)，我們在 Anki 中我們加入的是「筆記」，建立卡片的任務被交給了 Anki。在[主視窗](studying.md#牌組-decks)中按一下「新增」，就會出現新增筆記的視窗。
+回憶[基礎](getting-started.md)，我們在 Anki 中加入的是「筆記」，建立卡片的任務被交給了 Anki。在[主視窗](studying.md#牌組-decks)中按一下「新增」，就會出現新增筆記的視窗。
 
 ![新增畫面](media/add_screen.png)
 
@@ -14,13 +14,13 @@
 
 筆記類型下方有一些按鈕，還有一個寫著「正面」和「背面」的區域。「正面」和「背面」是筆記的「[欄位](getting-started.md#筆記--欄位-notes--fields)」，你可以使用上方的「欄位...」按鈕來新增、移除或重新命名各欄位。
 
-欄位下方還有一個寫著「**標籤**」的區域。標籤是可以附加在欄位下方的標籤。你可以為筆記加上標籤，以便整理和尋找。如果不需要標籤則可以留空。標籤以半形空格分隔。如果標籤列寫著
+欄位下方還有一個寫著「**標籤**」的區域。為筆記加上標籤可方便整理和尋找，如果不需要標籤則可以留空。標籤以半形空格分隔。如果標籤列寫著
 
     vocab check_with_tutor
 
 則加入的筆記會有兩個標籤。
 
-在「正面」和「背面」中輸入文字後，按一下「新增」按鈕或 <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (<kbd>Command</kbd>+<kbd>Enter</kbd>) 來將筆記加入你的集合中。同時，卡片將被建立並放入你選取的牌組。若要編輯加入的卡片，請點選「歷程記錄」按鈕來使用[瀏覽器](browsing.md)檢視剛加入的卡片。
+在「正面」和「背面」中輸入文字後，按下「新增」按鈕或 <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (Mac: <kbd>Command</kbd>+<kbd>Enter</kbd>) 來將筆記加入你的集合中。同時，卡片將被建立並放入你選取的牌組。若要編輯加入的卡片，請點選「歷程記錄」按鈕來使用[瀏覽器](browsing.md)檢視剛加入的卡片。
 
 請參閱〈[編輯器](deck-options.md#牌組選項-review-sort-order)〉章節來進一步了解筆記類型下方/欄位區域上方的按鈕。
 
@@ -36,7 +36,7 @@ Anki 會檢查第一個欄位是否唯一，所以若你有兩張卡片的「正
 
 - **保持簡單**：卡片越短就越容易複習。別以為多寫一點有益無害，最後複習苦的是你自己。
 
-- **懂了再記**: 如果你在學習語言，請儘量不要背「XX必考3000字」之類的單字表。學習語言的效率最高的途徑是透過有上下文關聯的句子來理解，並同時學到句中的單字。就像如果你在學習電腦課程，一堆縮寫直接背根本背不下。但當你了解了這些縮寫背後的概念後，背起來將輕而易舉。
+- **懂了再記**：如果你在學習語言，請儘量不要背「XX必考3000字」之類的單字表。學習語言的效率最高的途徑是透過有上下文關聯的句子來理解，並同時學到句中的單字。就像如果你在學習電腦課程，一堆縮寫唸起來可能像天書一樣。但當你了解了這些縮寫背後的概念後，背起來將輕而易舉。
 
 ## 新增筆記類型 Adding a Note Type
 
@@ -74,162 +74,81 @@ Anki 預留了一些[特殊欄位](templates/fields.md#特殊欄位-special-fiel
 
 新增欄位後，你可能會想要把欄位的內容放到卡片正面或背面上。請參閱〈[模板](templates/intro.md)〉章節來進一步了解。
 
-## Changing Deck / Note Type
+## 更改牌組/筆記類型 Changing Deck / Note Type
 
-While adding, you can click on the top left button to change note type,
-and the top right button to change deck. The window that opens up will
-not only allow you to select a deck or note type, but also to add new
-decks or manage your note types.
+新增筆記時，你可以按一下左上方的按鈕來更改筆記類型，或按一下右上方的按鈕來更改牌組。你可以在開啟的視窗中選取已有的牌組和筆記類型，或是新增牌組和管理筆記類型。
 
-## Organizing Content
+## 整理 Organizing Content
 
 ### 恰當運用牌組 Using Decks Appropriately
 
-[Decks](getting-started.md#牌組-decks) are designed to divide your content up into
-broad categories that you wish to study separately, such as English, Geography,
-and so on. You may be tempted to create lots of little decks to keep your
-content organized, such as "my geography book chapter 1", or "food verbs", but
-this is not recommended, for the following reasons:
+使用[牌組](getting-started.md#牌組-decks)可以讓你把內容分類，以便分別學習「英文」、「地理」等不同學科。但不建議分類過細，分成「有機化學第二章」、「食物字彙」這樣的牌組，原因是：
 
-- Lots of little decks may mean you end up seeing cards in a
-  recognizable order. On older scheduler versions, new cards can only
-  be introduced in deck order. And if you were planning to click on each deck
-  in turn (which is slow), you will end up seeing all the "chapter 1" or
-  "food verb" reviews together. This makes it easier to answer the
-  cards, as you can guess them from the context, which leads to weaker
-  memories. When you need to recall the word or phrase outside Anki,
-  you won't always have the luxury of being shown related content first!
+- 過多細分牌組會使卡片以你知道的順序出現。使用較舊的排程器版本時，新卡片只會依牌組順序出現。此外，若你打算分別學習每一個牌組（而且一個一個牌組來按會很慢），則「第二章」中的所有卡片都會排到一起複習。這樣會有損你的記憶，因為同類的卡片可能會幫你想起答案，從而導致你沒有完全憑自身記憶來作答。因而，當你在考試時，因為沒有其他卡片來幫你，你可能會完全回想不出一張卡片的內容。
 
-- While less of a problem than it was in earlier Anki versions,
-  adding hundreds of decks may cause slowdowns, and very large deck
-  trees with thousands of items can actually break the display of
-  the deck list in Anki versions before 2.1.50.
+- 雖然較新的 Anki 版本中可能較少出現，但一大堆牌組可能會導致運作緩慢。在 2.1.50 及較舊的版本中，上千個牌組和層級還會導致牌組清單無法正常顯示。
 
-### Using Tags
+### 使用標籤 Using Tags
 
-Instead of creating lots of little decks, it's a better idea to use tags
-and/or fields to classify your content. Tags are a useful way to boost
-search results, find specific content, and keep your collection
-organized.
-There are many ways of using tags and flags effectively, and
-thinking in advance about how you want to use them will help you decide
-what will work best for you.
+雖然不建議細分牌組，但我們可以使用標籤或欄位來達成類似的目的。標籤可以幫你更精準地搜尋，並保持集合井然有序。你可以自由使用標籤和旗標，建議提前規劃好使用方法，這樣將更容易找出最適合你的方案。
 
-Some people prefer using decks and subdecks to keep their cards organized,
-but using tags have a big advantage over decks for that: you can add several
-tags to a single note, but a single card can only belong to one deck, which
-makes tags a more powerful and flexible categorization system than
-decks in most cases. You can also organize tags in trees [in the same way as you can do for decks](getting-started.md#牌組-decks).
+有些人可能喜歡用牌組和子牌組來整理卡片，但你可以給一則筆記加上多個標籤，而一張卡片只能放在一個牌組中。在大多數情況下，標籤可以更好地進行分類整理。你也可以[跟牌組一樣](getting-started.md#牌組-decks)，分上下層級來建立父標籤/子標籤。
 
-For example, instead of creating a "food verbs" deck, you could add those
-cards to your main language study deck, and tag the cards with "food" and
-"verb". Since each card can have multiple tags, you can do things like
-[search](searching.md#tags-decks-cards-and-notes) for all verbs, or all
-food-related vocabulary, or all verbs that are related to food.
+譬如，如果你想建立「食物動詞」牌組，更好的辦法是，把卡片放入學習語言的主牌組，然後為卡片加上「食物」和「動詞」標籤。得益於多標籤，你可以[搜尋](searching.md#標籤、牌組、卡片和筆記-tags-decks-cards-and-notes)所有動詞，所有食物字彙，或所有與食物有關的動詞。
 
-You can add tags from the Edit window and from the [Browser](browsing.md), and you can also add,
-delete, rename, or organize tags there. Please note that
-tags work at [note](getting-started.md#筆記--欄位-notes--fields) level, which means that when you tag a card that has siblings,
-all the siblings will be tagged as well. If you need to tag a single card,
-but not its siblings, you should consider using flags instead.
+你可以在編輯視窗和[瀏覽器](browsing.md)中加入標籤，在瀏覽器中還可以新增、刪除、重新命名或整理標籤。請注意，標籤是套用於[筆記](getting-started.md#筆記--欄位-notes--fields)上，因此當你為一張卡片加上標籤時，關聯的卡片也會被加上標籤。若僅需為一張卡片加上標籤，而不影響同一則筆記的其他卡片，請選擇使用旗標。
 
-### Using Flags
+### 使用旗標 Using Flags
 
-Flags are similar to tags, but they will appear during study in the review
-window, showing a colored flag icon on the upper right area of the screen.
-You can also search for flagged cards in the Browse screen, rename flags
-from the browser and create filtered decks from flagged cards, but unlike tags,
-a single card can have only one flag at a time. Another important difference
-is that flags work at [card](getting-started.md#卡片-cards) level, so flagging a card that has siblings
-won't have any effect on the card's siblings.
+旗標跟標籤類似，但旗標會在學習時出現在畫面右上方。你也可以搜尋帶旗標的卡片、在瀏覽器中重新命名旗標，或是建立僅限某一旗標的篩選牌組。但與標籤不同，一張卡片只能有一個旗標。另外，旗標套用於[卡片](getting-started.md#卡片-cards)自身，因此不會影響關聯卡片。
 
-You can flag / unflag cards directly while in review mode (by pressing
-<kbd>CTRL</kbd> + <kbd>1-7</kbd> on Windows or <kbd>CMD</kbd> + <kbd>1-7</kbd> on Mac)
-and from the [Browser.](browsing.md)
+你可以在複習畫面中為卡片加上/移除旗標（Windows: <kbd>CTRL</kbd> + <kbd>1-7</kbd>，Mac: <kbd>CMD</kbd> + <kbd>1-7</kbd>），或在[瀏覽器](browsing.md)中編輯。
 
-### The "Marked" Tag
+### 標記「Marked」標籤 The "Marked" Tag
 
-Anki treats a tag called "marked" specially. There are options in the review
-screen and browse screen to add and remove the "marked" tag. The review screen
-will show a star when the current card's note has that tag. And cards are
-shown in a different color in the browse screen when their note is marked.
+「marked」是一個特殊標籤。複習畫面和瀏覽器中提供了標記/取消標記的選項，即加入/移除「marked」標籤。標記了筆記後，其卡片會在複習畫面中顯示一顆星，並會在瀏覽器中顯示為不同顏色。
 
-Note: Marking is mainly left around for compatibility with older Anki
-versions; most users will want to use [flags](editing.md#using-flags) instead.
+注意：Anki 保留著「標記」功能主要是為了與較舊版本相容；現建議使用[旗標](editing.md#使用旗標-using-flags)。
 
-### Using Fields
+### 使用欄位 Using Fields
 
-For those who like to stay very organized, you can add fields to your
-notes to classify your content, such as "book", "page", and so on. Anki
-supports searching in specific fields, which means you can do a search
-for `"book:my book" page:63` and immediately find what you're looking
-for.
+如欲整理得更為精細，你還可以新增一些用來分類的欄位，比如「書冊」、「頁碼」等。Anki 支援搜尋特定欄位中的內容，所以當你需要英文第一冊第63頁的卡片時，搜尋 `"書冊:英文 第一冊" 頁碼:63` 就能找到這些卡片。
 
-### Custom Study and Filtered Decks
+### 自訂學習和篩選牌組 Custom Study and Filtered Decks
 
-Using [custom study and filtered deck](filtered-decks.md) you can create
-temporary decks out of search
-terms. This allows you to review your content mixed together in a single
-deck most of the time (for optimum memory), but also create temporary
-decks when you need to focus on particular material, such as before a
-test. The general rule is that if you always want to be able to study
-some content separately, it should be in a normal deck; if you only
-occasionally need to be able to study it separately (for a test, when
-under a backlog, etc.), then filtered decks created from tags, flags,
-marks or fields are better.
+透過[自訂學習和篩選牌組](filtered-decks.md)，你可以套用搜尋條件來建立一個臨時牌組。這樣你可以維持集中所有內容到一個牌組來複習的原則（記憶效果最佳），但在考前也能透過建立臨時牌組來挑重點複習。如果你一直需要單獨學習部分內容，建議建立普通牌組；若僅偶爾有需求（考前複習、清理積壓複習等），則建議透過標籤、旗標、標記或欄位等搜尋條件來建立篩選牌組。
 
-## Editing Features
+## 編輯功能 Editing Features
 
-The editor is shown when [adding notes](editing.md), [editing a note](studying.md#editing-and-more) during reviews, or [browsing](browsing.md).
+[新增筆記](editing.md)、複習時[編輯筆記](studying.md#「編輯」和「其他」-editing-and-more)和[瀏覽器](browsing.md)中會顯示編輯器。
 
-![Editor icons](media/editor_icons.png)
+![編輯器圖示](media/editor_icons.png)
 
-On the top left are two buttons, which open the [fields](editing.md#自訂欄位-customizing-fields) and
-[cards](templates/intro.md) windows.
+點選左上方的兩個按鈕來打開[欄位](editing.md#自訂欄位-customizing-fields)和[卡片](templates/intro.md)視窗。
 
-On the right are buttons that control formatting. Bold, italic and
-underline work like they do in a word processing program. The next two
-buttons allow you to subscript or superscript text, which is useful for
-chemical compounds like H<sub>2</sub>O or simple mathematical equations like
-x<sup>2</sup>. Then, there are two buttons to allow you to change text colour.
+右邊是格式控制按鈕。粗體、斜體和底線用法與一般文書處理軟體一樣。緊接在後的是上標和下標，可用於化學符號 H<sub>2</sub>O 或簡單的數學方程式 x<sup>2</sup>。接下來的兩個按鈕可讓你更改文字顏色。
 
-The rubber eraser button clears any formatting in the currently selected text — including the colour
-of the text, whether the selected text is bold, etc. The next three buttons allow creating lists, text alignment and text indent.
+點選橡皮擦按鈕將清除已選取文字的所有格式——包括顏色、粗斜體等。後面三個按鈕用於建立清單、調整文字對齊和增加/減少縮排。
 
-You can use the paper-clip button to select audio, images, and videos from
-your computer's hard drive and attach them to your notes. Alternatively, you
-can copy the media onto your computer's clipboard (for instance, by
-right-clicking an image on the web and choosing 'Copy Image') and paste
-it into the field that you want to place it in. For more information
-about media, please see the [media](media.md) section.
+點選迴紋針按鈕後，你可以從電腦硬碟中選取音訊、圖片和影片來加入筆記。你也可以直接複製媒體檔（如在瀏覽器中右鍵選擇「複製圖片」），然後在需要的欄位貼上。請參閱〈[媒體檔](media.md)〉章節來進一步了解媒體檔。
 
-The microphone icon allows you to record from your computer's microphone
-and attach the recording to the note.
+點選麥克風圖示將使用電腦麥克風開始錄製音訊，音檔錄製結束後將被加入筆記。
 
-The Fx button shows shortcuts to add MathJax or
-[LaTeX](math.md) to your notes.
+點選 Fx 按鈕會顯示新增 MathJax 或 [LaTeX](math.md) 至筆記的捷徑。
 
-The \[…​\] buttons are visible when a cloze note type is selected.
-![Cloze icons](media/cloze_icons.png)
+使用克漏字筆記類型時，還會顯示 \[…​\] 按鈕。
+![克漏字圖示](media/cloze_icons.png)
 
-The `</>` button allows editing the underlying HTML of a field.
-![HTML icon](media/html_icon.png)
+使用 `</>` 按鈕可以編輯欄位的 HTML 原始碼。
+![HTML 圖示](media/html_icon.png)
 
-Anki 2.1.45+ supports adjusting sticky fields directly from the editing screen.
-If you click on the pin icon on the right of a field, Anki will not clear out
-the field's content after a note is added. If you find yourself entering the
-same content into multiple notes, you may find this useful. On previous Anki
-versions, sticky fields were toggled from the Fields screen.
+Anki 2.1.45+ 支援在編輯畫面調整欄位凍結。點選欄位右上方的釘選圖示後，每次新增筆記後 Anki 都不會清除這個欄位中的內容。如果你需要新增的筆記中有多則含有相同欄位則可凍結此欄位。在較舊的 Anki 版本中，切換欄位凍結的設定在欄位畫面中。
 
-![Pin icon](media/Pin_icon.png)
+![釘選圖示](media/Pin_icon.png)
 
-Most of the buttons have shortcut keys. You can hover the mouse cursor
-over a button to see its shortcut.
+大多數按鈕都有快速鍵。將滑鼠游標懸停在按鈕上即可檢視其快速鍵。
 
-When pasting text, Anki will keep most formatting by default. If you
-hold down the <kbd>Shift</kbd> key while pasting, Anki will strip most of the
-formatting. Under Preferences, you can toggle "Paste without shift
-key strips formatting" to modify the default behaviour.
+根據預設，在 Anki 中貼上文字時會保留大部分格式。若在貼上的同時按住 <kbd>Shift</kbd> 鍵，則 Anki 會清除大部分格式。你也可以在偏好設定中切換「自動清除文字格式（貼上時無需按住 shift 鍵）」選項。
 
 ## 克漏字空格 Cloze Deletion
 
@@ -330,7 +249,7 @@ sure to clone the existing Cloze type instead of another type of note.
 Things like formatting can be customized, but it is not possible to add
 extra card templates to the cloze note type.
 
-## Image Occlusion
+## 影像遮擋 Image Occlusion
 
 Anki 23.10+ supports Image Occlusion cards natively. An Image
 Occlusion (IO) note is a special case of cloze deletion based on images

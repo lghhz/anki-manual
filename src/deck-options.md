@@ -243,7 +243,7 @@ some notes had all their cards introduced and other notes had only one
 or two. Please see the "bury related" and "display order" sections below
 for more info.
 
-## 忘記 Lapses
+## 遺忘 Lapses
 
 When you forget a review card, it is said to have 'lapsed', and the card must be
 relearnt. The default behaviour for lapsed reviews is to reset the interval to

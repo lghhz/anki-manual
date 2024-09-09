@@ -121,7 +121,7 @@ find notes with Front field containing dog somewhere
 `正*:text`\
 在名稱開頭為「正」的欄位中尋找筆記。僅支援在 Anki 2.1.24+ 或 AnkiMobile 2.1.60+ 版本上使用。
 
-## Tags, decks, cards and notes
+## 標籤、牌組、卡片和筆記 Tags, decks, cards and notes
 
 `tag:animal`\
 finds notes with the tag "animal", or subtags like "animal::mammal".
@@ -241,7 +241,7 @@ cards that have been [automatically](leeches.md) or manually suspended.
 cards that have been buried, either [automatically](studying.md#關聯卡片和暫停-siblings-and-burying) or
 manually
 
-Cards that have [lapsed](deck-options.md#lapses) fall into several of the previous categories, so it may
+Cards that have [lapsed](deck-options.md#遺忘-lapses) fall into several of the previous categories, so it may
 be useful to combine different search terms to get more precise results:
 
 `is:learn is:review`\
