@@ -27,7 +27,7 @@
 - [新手入門 Getting Started](getting-started.md)
 - [Getting Help](getting-help.md)
 - [學習 Studying](studying.md)
-- [Adding/Editing](editing.md)
+- [新增/編輯 Adding/Editing](editing.md)
 - [Card Templates](templates/intro.md)
   - [Field Replacements](templates/fields.md)
   - [Card Generation](templates/generation.md)

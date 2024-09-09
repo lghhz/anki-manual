@@ -416,7 +416,7 @@ audio until you press the replay audio key, `r` or `F5`.
 _Always include question side when replaying audio_ controls whether audio from
 the question side should be played when replaying the audio while an answer is
 shown. Please note that it does not control what happens when you show the
-answer; for that please see [this section](templates/fields.md#special-fields).
+answer; for that please see [this section](templates/fields.md#特殊欄位-special-fields).
 
 ## Advanced
 

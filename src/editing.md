@@ -1,10 +1,10 @@
-# Adding/Editing
+# 新增/編輯 Adding/Editing
 
 <!-- toc -->
 
-## Adding Cards and Notes
+## 新增卡片和筆記 Adding Cards and Notes
 
-回憶[基礎](getting-started.md)，我們在 Anki 中我們加入的是「筆記」，建立卡片的任務被交給 Anki。在[主視窗](studying.md#牌組-decks)中按一下「新增」，就會出現新增筆記的視窗。
+回憶[基礎](getting-started.md)，我們在 Anki 中我們加入的是「筆記」，建立卡片的任務被交給了 Anki。在[主視窗](studying.md#牌組-decks)中按一下「新增」，就會出現新增筆記的視窗。
 
 ![新增畫面](media/add_screen.png)
 
@@ -20,136 +20,59 @@
 
 則加入的筆記會有兩個標籤。
 
-When you have entered text into the front and back, you can click the
-"Add" button or press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (<kbd>Command</kbd>+<kbd>Enter</kbd> on a Mac) to add the
-note to your collection. When you do so, a card will be created as well,
-and placed into the deck you chose. If you would like to edit a card you
-added, you can click the history button to search for a recently added
-card in the [browser](browsing.md).
+在「正面」和「背面」中輸入文字後，按一下「新增」按鈕或 <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (<kbd>Command</kbd>+<kbd>Enter</kbd>) 來將筆記加入你的集合中。同時，卡片將被建立並放入你選取的牌組。若要編輯加入的卡片，請點選「歷程記錄」按鈕來使用[瀏覽器](browsing.md)檢視剛加入的卡片。
 
-For more information on the buttons between the note type and the
-fields, please see the [editor](editing.md) section.
+請參閱〈[編輯器](deck-options.md#牌組選項-review-sort-order)〉章節來進一步了解筆記類型下方/欄位區域上方的按鈕。
 
-### Duplicate Check
+### 檢查重複 Duplicate Check
 
-Anki checks the first field for uniqueness, so it will warn you if you
-enter two cards with a Front field of "apple" (for example). The
-uniqueness check is limited to the current note type, so if you're
-studying multiple languages, two cards with the same Front would not be
-listed as duplicates as long as you had a different note type for each
-language.
+Anki 會檢查第一個欄位是否唯一，所以若你有兩張卡片的「正面」欄位都寫著「apple」，你將會看到一條警告。檢查重複項目的範圍為當前的筆記類型，因此若你在學習的兩種語言中恰好有兩個字的拼寫相同，你可以為兩種語言分別建立一個筆記類型，這樣「正面」欄位相同也不會提示重複。
 
-Anki does not check for duplicates in other fields automatically for
-efficiency reasons, but the browser has a "Find Duplicates" function,
-which you can run periodically.
+為效率所限，Anki 不會自動檢查其他欄位中的重複項目，你可以手動定期執行瀏覽器中的「尋找重複項目」功能。
 
-### Effective Learning
+### 高效學習 Effective Learning
 
-Different people like to review in different ways, but there are some
-general concepts to keep in mind. An excellent introduction is [this article](https://super-memory.com/articles/20rules.htm) on the SuperMemo
-site. In particular:
+每個人的複習方法都不一樣，但最好還是要知道一些基本的概念。建議參閱 SuperMemo 上的[這篇文章](https://super-memory.com/articles/20rules.htm)。特別注意：
 
-- **Keep it simple**: The shorter your cards, the easier they are to
-  review. You may be tempted to include lots of information "just in
-  case," but reviews will quickly become painful.
+- **保持簡單**：卡片越短就越容易複習。別以為多寫一點有益無害，最後複習苦的是你自己。
 
-- **Don't memorize without understanding**: If you are studying a
-  language, try to avoid large lists of words. The best way to learn
-  languages is in context, which means seeing those words used in a
-  sentence. Likewise, imagine you're studying a computer course. If
-  you attempt to memorize the mountain of acronyms, you'll find it
-  very difficult to make progress. But if you take the time to
-  understand the concepts behind the acronyms, learning the acronyms
-  will become a lot easier.
+- **懂了再記**: 如果你在學習語言，請儘量不要背「XX必考3000字」之類的單字表。學習語言的效率最高的途徑是透過有上下文關聯的句子來理解，並同時學到句中的單字。就像如果你在學習電腦課程，一堆縮寫直接背根本背不下。但當你了解了這些縮寫背後的概念後，背起來將輕而易舉。
 
-## Adding a Note Type
+## 新增筆記類型 Adding a Note Type
 
-While basic note types are sufficient for simple cards with only a word
-or phrase on each side, as soon as you find yourself wanting to include
-more than one piece of information on the front or back, it's better to
-split that information up into more fields.
+雖然基本型足以應付一面一字這種較為簡單的卡片，但若要在正面或背面顯示多個要點，最好的辦法是把這些資訊分為多個欄位。
 
-You may find yourself thinking "but I only want one card, so why can't I
-just include the audio, a picture, a hint, and the translation in the
-Front field?" If you'd prefer to do that, that's fine. But the
-disadvantage of that approach is that all the information is stuck
-together. If you wanted to sort your cards by the hint, you wouldn't be
-able to do that as it is mixed in with the other content. You also
-wouldn't be able to do things such as moving the audio from the front to the
-back, except by laboriously copying and pasting it for every note. By
-keeping content in separate fields, you make it much easier to adjust
-the layout of your cards in the future.
+你可能會想，「如果我只需要一張卡片，為甚麼不能直接把音訊、圖片、提示和翻譯全部放到正面欄位中？」如果你想這麼做也沒關係。不過這樣，所有的內容將被混在一起。你將無法依提示或翻譯來排序，也沒有辦法直接把所有音訊移到另外一面上，只能一則一則筆記複製貼上來編輯。現在多分幾個欄位，未來修改卡片佈局時就不用大費手腳。
 
-To create a new type of note, choose Tools → Manage Note Types from the
-main Anki window. Then click "Add" to add a new type of note. You will now
-see another screen that gives you a choice of note types to base the new
-type on. "Add" means to base the newly created type on one that comes
-with Anki. "Clone" means to base the newly created type on one that is
-already in your collection. For instance, if you'd created a French
-vocab type already, you might want to clone that when creating a German
-vocab type.
+要建立新的筆記類型，請在 Anki 主視窗選取「工具」→「管理筆記類型」。然後按一下「新增」來新增筆記類型。在新的畫面中，你可以選取新筆記類型的基底。點選「新增」將使用 Anki 內建的筆記類型。「複製」則可讓你選取集合中已有的筆記類型。比如你可以在新增「日文」筆記類型時直接複製已有的「英文」類型。
 
-After choosing OK, you will be asked to name the new type. The subject
-material that you are studying is a good choice here – things like "Japanese",
-"Trivia", and so on. Once you have chosen a name, close the Note Types
-window, and you will return to the adding window.
+選擇「好」之後，你可以為你的新類型命名。命名後，關閉筆記類型視窗，回到新增視窗。
 
 ## 自訂欄位 Customizing Fields
 
-To customize fields, click the "Fields…​" button when adding or editing
-a note, or while the note type is selected in the Manage Note Types
-window.
+若要自訂欄位，請在新增/編輯筆記畫面或「管理筆記類型」視窗中點選「欄位...」按鈕。
 
 ![Fields](media/fields.png)
 
-You can add, remove, or rename fields by clicking the appropriate
-buttons. To change the order in which the fields appear in this dialog
-and the add notes dialog, you can use the reposition button, which asks
-for the numerical position you want the field to have. So if you want to
-change a field to be the new first field, enter "1".
+你可以在欄位畫面中新增、移除或重新命名欄位。如需更改欄位在此處與新增筆記畫面中的順序，請按「調整順序 (Reposition)」按鈕，並輸入數字序號。例如，要將欄位改為第一個欄位，則應輸入 「1」。
 
-Do not use 'Tags', 'Type', 'Deck', 'Card', or 'FrontSide' as field
-names, as they are [special fields](templates/fields.md#special-fields) and will not work
-properly.
+Anki 預留了一些[特殊欄位](templates/fields.md#特殊欄位-special-fields)，如「Tags」、「Type」、「Deck」、「Card」和「FrontSide」。因此請勿將欄位命名為這些名稱，否則欄位將無法正常運作。
 
-The options at the bottom of the screen allow you to edit various
-properties of the fields to be used when adding and editing the cards.
-This is _not_ where you customize what appears on your cards when
-reviewing; for that, please see [templates](templates/intro.md).
+畫面底部的選項用於調整新增和編輯卡片時的欄位屬性。這些選項**不是**用來自訂學習時顯示的卡片樣式；請參閱〈[模板](templates/intro.md)〉來進一步了解卡片樣式自訂。
 
-- **Editing Font** allows you to customize the font and size used when
-  editing notes. This is useful if you want to make unimportant
-  information smaller, or increase the size of foreign characters which
-  are hard to read. The changes you make here do not affect how cards
-  appear when reviewing: to do that, please see the
-  [templates](templates/intro.md) section. If you have enabled the "type in the
-  answer" function, however, the text you type will use the font size
-  defined here. (For information about how to change the actual font face
-  when typing the answer, please see the [checking your answer](templates/fields.md#檢查答案-checking-your-answer) section.)
+- **編輯器字型 Editing Font**：調整筆記編輯畫面的字型和大小，可以用來縮小沒那麼重要的欄位，或是放大較難看清的字母。此處更動不會影響卡片複習時的樣式，如需自訂卡片樣式，請參閱〈[模板](templates/intro.md)〉。不過，如果你啟用了「輸入答案」，輸入框中的文字將使用此處設定。（有關如何在輸入答案時變更實際字型的資訊，請參閱〈[檢查答案](templates/fields.md#檢查答案-checking-your-answer)〉章節來進一步了解如何更改答案實際輸入字型）。
 
-- **Sort by this field…​** tells Anki to show this field in the Sort Field
-  column of the browser. You can use this to sort cards by that field.
-  Only one field can be the sort field at once.
+- **依此欄位在瀏覽器中排序 Sort by this field…​**：設定瀏覽器中顯示的排序欄位。一個筆記類型只能設定一個排序欄位。
 
-- **Reverse text direction** is useful if you are studying languages that
-  display text from right to left (RTL), such as Arabic or Hebrew. This
-  setting currently only controls editing; to make sure the text displays
-  correctly during review, you'll need to adjust your
-  [template](templates/styling.md#text-direction).
+- **反轉文字方向為由右至左 (RTL) Reverse text direction**：用於阿拉伯語、希伯來語等從右向左顯示文字的語言。此設定目前僅在編輯時生效；若要確保在複習時也能正確顯示卡片，你將需要調整[模板](templates/intro.md)。
 
-- **Use HTML editor by default** is useful if you prefer to edit the fields
-  directly in HTML.
+- **預設使用 HTML 編輯器 Use HTML editor by default**：供比較喜歡編輯欄位的 HTML 原始碼的使用者使用。
 
-- **Collapse by default**. Fields can be collapsed/expanded.
-  The animation can be disabled in the [preferences.](preferences.md)
+- **預設摺疊此欄位Collapse by default**：設定欄位預設狀態為摺疊或展開。另外，摺疊/展開的動畫可以在[偏好設定](preferences.md)中停用。
 
-- **Exclude from unqualified searches (slower)** can be used if you want
-  the content of a certain field not to appear in unqualified [(not limited to a specific field)](searching.md#限制欄位-limiting-to-a-field)
-  searches.
+- **若搜尋條件未指定欄位，則不搜尋此欄位的內容（較慢）Exclude from unqualified searches (slower)**：可以在搜尋時排除某一欄位的內容，只有在[限制欄位](searching.md#限制欄位-limiting-to-a-field)（搜尋條件中指定了欄位）時才會出現在搜尋結果中。
 
-After you have added fields, you will probably want to add them to the front
-or back of your cards. For more information on that, please see the
-[templates](templates/intro.md) section.
+新增欄位後，你可能會想要把欄位的內容放到卡片正面或背面上。請參閱〈[模板](templates/intro.md)〉章節來進一步了解。
 
 ## Changing Deck / Note Type
 
