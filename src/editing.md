@@ -116,7 +116,7 @@ Anki 預留了一些[特殊欄位](templates/fields.md#特殊欄位-special-fiel
 
 ### 自訂學習和篩選牌組 Custom Study and Filtered Decks
 
-透過[自訂學習和篩選牌組](filtered-decks.md)，你可以套用搜尋條件來建立一個臨時牌組。這樣你可以維持集中所有內容到一個牌組來複習的原則（記憶效果最佳），但在考前也能透過建立臨時牌組來挑重點複習。如果你一直需要單獨學習部分內容，建議建立普通牌組；若僅偶爾有需求（考前複習、清理積壓複習等），則建議透過標籤、旗標、標記或欄位等搜尋條件來建立篩選牌組。
+透過[自訂學習和篩選牌組](filtered-decks.md)，你可以套用搜尋條件來建立一個臨時牌組。這樣你可以維持集中所有內容到一個牌組來複習的原則（記憶效果最佳），但在考前也能透過建立臨時牌組來挑重點複習。如果有些內容每次都需要單獨學習，建議把這些內容分開放入一個普通牌組；若僅偶爾需要單獨學習（如考前複習、清理積壓複習等），則建議僅在有需求時透過標籤、旗標、標記或欄位等搜尋條件來建立篩選牌組。
 
 ## 編輯功能 Editing Features
 
@@ -152,228 +152,147 @@ Anki 2.1.45+ 支援在編輯畫面調整欄位凍結。點選欄位右上方的�
 
 ## 克漏字空格 Cloze Deletion
 
-'Cloze deletion' is the process of hiding one or more words in a
-sentence. For example, if you have the sentence:
+「克漏字空格」可以用來隱藏句子中的字詞。比如：
 
-    Canberra was founded in 1913.
+    臺北縣2010年升格為新北市。
 
-…​and you create a cloze deletion on "1913", then the sentence would
-become:
+你可以把這句話中的「2010」設為空格：
 
-    Canberra was founded in [...].
+    臺北縣[...]年升格為新北市。
 
-Sometimes sections that have been removed in this fashion are said to be
-'occluded'.
+要進一步了解使用克漏字的優點，請參閱 [Rule 5](https://super-memory.com/articles/20rules.htm)（英文）。
 
-For more information on why you might want to use cloze deletion, see
-Rule 5 [here](https://super-memory.com/articles/20rules.htm).
+要在 Anki 中建立克漏字，選取克漏字筆記類型，並在「文字」欄位中輸入文字。選取要隱藏的文字，然後點選 \[…​\] 按鈕。Anki 會將選取的文字取代：
 
-Anki provides a special cloze deletion type of note, to make creating
-clozes easy. To create a cloze deletion note, select the Cloze note
-type, and type some text into the "Text" field. Then drag the mouse over
-the text you want to hide to select it, and click the \[…​\] button.
-Anki will replace the text with:
+    臺北縣{{c1::2010}}年升格為新北市。
 
-    Canberra was founded in {{c1::1913}}.
+「c1」表示建立的第一個空格。你可以繼續建立空格，選取「臺北縣」，然後點選 \[…​\]：
 
-The "c1" part means that you have created one cloze deletion on the
-sentence. You can create more than one deletion if you'd like. For
-example, if you select Canberra and click \[…​\] again, the text will
-now look like:
+    臺北縣{{c1::2010}}年升格為{{c2::新北市}}。
 
-    {{c2::Canberra}} was founded in {{c1::1913}}.
+此時，新增筆記後，Anki 將會為你建立兩張卡片。第一張卡片的問題面如下：
 
-When you add the above note, Anki will create two cards. The first card
-will show:
+    臺北縣[...]年升格為新北市。
 
-    Canberra was founded in [...].
+而答案面將會顯示完整的句子。第二張卡片的問題面如下：
 
-…​on the question, with the full sentence on the answer. The other card
-will have the following on the question:
+    臺北縣2010年升格為[...]。
 
-    [...] was founded in 1913.
+你還可以將多個空格合併為一張卡片。在上面的例子中，如果你把「c2」改為「c1」，則 Anki 只會建立一張卡片，問題面上「2010」和「新北市」都會被隱藏。在建立空格時，按住 <kbd>Alt</kbd> 鍵（Mac: <kbd>Option</kbd> 鍵）則 Anki 會自動使用相同的空格序號。
 
-You can also elide multiple sections on the same card. In the above
-example, if you change c2 to c1, only one card would be created, with
-both Canberra and 1913 hidden. If you hold down <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac)
-while creating a cloze, Anki will automatically use the same number
-instead of incrementing it.
+你可以在任意位置建立空格，例如你可以在「Canberra」一字中只選取「anberra」建立空格，這樣在卡片問題面上會顯示為「C\[…​\]」，留下首字母作為提示。
 
-Cloze deletions don't need to fall on word boundaries, so if you select
-"anberra" rather than "Canberra" in the above example, the question
-would appear as "C\[…​\] was founded in 1913", giving you a hint.
+你也可以加入不在原文中的提示。你可以這樣寫：
 
-You can also give yourself hints that don't match the text. If you
-replace the original sentence with:
+    Canberra::市名 was founded in 1913
 
-    Canberra::city was founded in 1913
+選取「Canberra::市名」，然後按\[…​\]以建立空格，兩個半形逗號「::」後面的文字將成為提示：
 
-…​and then press \[…​\] after selecting "Canberra::city", Anki will
-treat the text after the two colons as a hint, changing the text into:
+    {{c1::Canberra::市名}} was founded in 1913
 
-    {{c1::Canberra::city}} was founded in 1913
+在複習時，卡片顯示效果如下：
 
-When the card comes up for review, it will appear as:
+    [市名] was founded in 1913
 
-    [city] was founded in 1913.
+如需了解如何在克漏字卡片中輸入答案，請參閱〈[檢查答案](templates/fields.md#檢查答案-checking-your-answer)〉章節。
 
-For information on testing your ability to type in a cloze deletion
-correctly, please see the section on [typing answers](templates/fields.md#檢查答案-checking-your-answer).
+在 2.1.56 及以上版本中，你可以在克漏字空格中內嵌空格。比如：
 
-From version 2.1.56, nested cloze deletions are supported. For example, the following is valid:
+    {{c1::臺北縣{{c2::2010年}}}}升格為新北市。
 
-    {{c1::Canberra was {{c2::founded}}}} in 1913
+內嵌空格必須完全包含於外部的空格。也就是說不能像這樣只重疊一部分：
 
-The inner cloze is entirely nested within the outer. There is no support for partial overlaps, such as:
+    [...]升格為新北市 -> 臺北縣2010年
+    臺北縣[...]新北市 -> 2010年升格為
 
-    [...] founded in 1913 -> Canberra was
-    Canberra [...] in 1913 -> was founded
+「2010年」無法同時存在於兩個空格中。
 
-with the word "was" appearing in both deletions.
+在 2.1.56 之前的版本中，要建立有文字重疊的克漏字，你需要額外新增一個文字欄位，把欄位加入[模板](templates/intro.md)，然後在兩個文字欄位中都貼上原文：
 
-Prior to version 2.1.56, if you need to create clozes from overlapping text, add another Text
-field to your cloze, add it to the [template](templates/intro.md), and then when
-creating notes, paste the text into two separate fields, like so:
+    文字欄位 1：{{c1::臺北縣2010年}}升格為新北市。
 
-    Text1 field: {{c1::Canberra was founded}} in 1913
+    文字欄位 2：{{c1::臺北縣}}2010年升格為新北市。
 
-    Text2 field: {{c2::Canberra}} was founded in 1913
+預設的克漏字筆記類型還有一個「背面額外內容」欄位，這個欄位只會在卡片答案面出現，可以用來補充額外的資訊。
 
-The default cloze note type has a second field called Extra, that is
-shown on the answer side of each card. It can be used for adding some
-usage notes or extra information.
-
-The cloze note type is treated specially by Anki, and cannot be created
-based on a regular note type. If you wish to customize it, please make
-sure to clone the existing Cloze type instead of another type of note.
-Things like formatting can be customized, but it is not possible to add
-extra card templates to the cloze note type.
+克漏字是一種特殊的筆記類型，無法以普通的筆記類型為基底來建立。如需自訂克漏字類型，請確保複製的是克漏字類型。你可以自訂克漏字筆記類型的卡片樣式，但不能新增卡片模板。
 
 ## 影像遮擋 Image Occlusion
 
-Anki 23.10+ supports Image Occlusion cards natively. An Image
-Occlusion (IO) note is a special case of cloze deletion based on images
-instead of text, and allows you to create cards that hide some parts
-of an image, testing your knowledge of that hidden information.
+Anki 23.10 及以上版本支援影像遮擋（Image Occlusion），無須安裝附加元件。影像遮擋類似克漏字，但隱藏的不是文字，而是圖片中的一部分。
 
-![Image Occlusion](media/io.jpg)
+![影像遮擋](media/io.jpg)
 
-### Adding an image
+### 加入圖片 Adding an image
 
-To add IO cards to your collection, open the Add screen, click on "Type"
-and choose "Image Occlusion" from the list of built-in note types.
-Then, click on "Select Image" to load an image file saved on your
-computer's hard drive, or on "Paste image from clipboard"
-if you have an image copied to the clipboard.
+要新增影像遮擋卡片，請在新增畫面上點選筆記類型，並選擇內建的「影像遮擋」筆記類型。然後按一下「選取影像」來選取硬碟上的圖檔，或者按一下「貼上剪切版影像」來貼上你複製的圖片。
 
-### Adding IO cards
+### 新增遮擋卡 Adding IO cards
 
-After loading an image, the IO editor will open. Click on the
-icons on the left to add as many areas to your image as you want.
-There are three basic shapes to choose from:
+載入影像後，影像遮擋編輯器將出現。你可以使用左邊的按鈕來選定區域，可選三種形狀：
 
-- Rectangle
-- Ellipse
-- Polygon
+- 矩形
+- 橢圓形
+- 多邊形
 
-You can also choose between two different IO modes for each note:
+筆記可選兩種影像遮擋模式：
 
-- **Hide All, Guess One**: All areas are hidden and only one
-  area at a time is revealed while learning.
-- **Hide One, Guess One**: Only one area at a time is hidden
-  and will be revealed during learning. The other areas will be visible.
+- **全部遮住，猜測一個 Hide All, Guess One**：隱藏所有區域，答案面只會揭露當前學習的區域。
+- **遮住一個，猜測一個 Hide One, Guess One**：只會隱藏/揭露當前學習的區域，其他區域不會被隱藏。
 
-![Image Occlusion Modes](media/io_modes.jpg)
+![影像遮擋模式](media/io_modes.jpg)
 
-Once you're done, click on the "Add" button, at the bottom of the screen.
-Anki will add a card for each shape or group of shapes you added in the previous step,
-and you can start reviewing them normally.
+編輯完成後，點選下方的「新增」按鈕。Anki 將為你加入的每個/組形狀都建立一張卡片。
 
-## Editing IO notes
+## 編輯遮擋筆記 Editing IO notes
 
-You can edit your IO notes by clicking on "Edit" while reviewing,
-or directly from the browser. There are several tools that you
-can use. Of note:
+你可以在複習時按一下「編輯」或直接在瀏覽器中來編輯遮擋筆記。可用的編輯工具：
 
-- Select: It allows you selecting one or more shapes to move,
-  resize, delete or group them.
-- Zoom: You can freely move the image and zoom in or out using the mouse wheel.
-- Shapes (Rectangle, Ellipse or Polygon): Use them to add new shapes / cards.
-- Text: It adds text areas to your image. These text areas can be moved,
-  resized or deleted, but no card will be created when you use this tool.
-- Undo / Redo.
-- Zoom In / Out - Reset zoom.
-- Toggle Translucency: Use this tool to temporarily view the hidden areas.
-- Delete: Use this tool to delete selected shapes and text areas. Please
-  note that deleting a shape won't delete its associated card automatically;
-  you will need to use Tools>Empty Cards afterwards, the same as
-  with regular cloze deletions.
-- Duplicate.
-- Group selection: Use this tool to create a cluster of shapes, which will
-  allow you to move, resize or delete them simultaneously. Please note that
-  two or more single shapes will create only one card once grouped.
-- Ungroup selection: Select a group and then click this button to make each shape independent again.
-- Alignment: This tool can be used to align your shapes / text areas as desired.
+- 選取：選取一或多個形狀來移動、調整大小、刪除或群組/解散群組。
+- 縮放：你可以使用滑鼠滾輪來移動、縮放影像。
+- 形狀（矩形/橢圓形/多邊形）：新增形狀/卡片。
+- 文字：加入文字框。文字框可被移動、調整大小或刪除。新增文字框時不會建立卡片。
+- 復原/重做
+- 縮小/放大/重置縮放
+- 切換半透明：可在編輯時檢視被隱藏的區域。
+- 刪除：刪除選取的形狀和文字框。跟刪除克漏字空格一樣，刪除形狀後相應的卡片不會被自動刪除，請手動執行「空白卡片」工具。
+- 複製
+- 群組：將所選形狀組成群組，可以同時移動、調整大小或刪除多個形狀。注意，多個形狀組成群組後只會建立一張卡片。
+- 取消群組：將所選群組解散為獨立的形狀。
+- 對齊：用來對齊形狀或文字框。
 
-While reviewing IO Cards a "Toggle Masks" button will appear just below the image.
-This button will temporary clear all shapes of the note when using "Hide All, Guess One" mode.
+複習遮擋卡時，圖片下方會顯示一個「切換遮罩」按鈕。學習使用「全部遮住，猜測一個」模式的卡片時可按下此按鈕來暫時揭露所有區域。
 
-## Inputting Foreign Characters and Accents
+## 輸入外文字元和變音符號 Inputting Foreign Characters and Accents
 
-All modern computers have built-in support for typing accents and
-foreign characters, and multiple ways to go about it. The method we
-recommend is by using a keyboard layout for the language you want to learn.
+現在的電腦都支援使用多種方式來輸入外文字元和變音符號。我們建議使用目標語言的鍵盤佈局。
 
-Languages with a separate script like Japanese, Chinese, Thai, and so on,
-have their own layouts specific to that language.
+中文、日文、泰文等使用非拉丁文字的語言都各自使用不同的鍵盤佈局。
 
-European languages that use accents may have their own layout, but can
-often be typed on a generic "international keyboard" layout. These work
-by typing the accent, then the character you want accented - e.g. an
-apostrophe (') then the letter a (a) gives á.
+有些歐洲語言使用變音符號，所以也有不同的佈局，但一般都可使用一個通用的「國際 (International)」鍵盤佈局來輸入。使用此佈局，只需先按下變音符號，再按下字母就能打出帶變音符號的字元——例如，先按「'」，再按「a」就能打出「á」。
 
-To add the international keyboard on Windows machines, please see
-<https://thegeekpage.com/how-to-add-us-international-keyboard-in-windows-10/>
+要在 Windows 上加入國際鍵盤佈局，請參閱：
+<https://support.microsoft.com/zh-tw/topic/如何在-windows-7-windows-vista-和-windows-xp-中使用-united-states-international-鍵盤配置-e05ce3ed-11f0-8fc2-498e-a214fa6b898f>
 
-To add it on Macs, please see
-<http://www.macworld.com/article/1147039/os-x/accentinput.html>
+要在 Mac 上新增輸入方式，請參閱：
+<https://support.apple.com/zh-tw/guide/mac-help/mchlp1406/mac>
 
-Keyboards for a specific language are added in a similar way, but we can
-not cover them all here. For more information, please try searching
-Google for "input Japanese on a mac", "type Chinese on Windows 10", and
-so on.
+若對其他語言的輸入法有疑惑，建議 Google 搜尋相關問題。
 
-If you are learning a right-to-left language, there are lots of other
-things to consider. Please see [this page](http://dotancohen.com/howto/rtl_right_to_left.html) for more
-information.
+如果你在學習從右至左書寫的語言，還需要考慮其他問題。請參閱[此頁面](http://dotancohen.com/howto/rtl_right_to_left.html)來進一步了解。
 
-The toolkit on which Anki is built has trouble dealing with a few input
-methods, such as holding down keys to select accented characters on macOS,
-and typing characters by holding down the <kbd>Alt</kbd> key and typing a
-numeric code on Windows.
+建置 Anki 使用的工具與一些輸入方式可能衝突，比如在 macOS 上按住按鍵來選取變音符號、在 Windows 上按住 <kbd>Alt</kbd> 鍵並輸入數字等方式。
 
-## Unicode Normalization
+## Unicode 正規化 Unicode Normalization
 
-Text like `á` can be represented in multiple ways on a computer, such as
-using a specific code for that symbol, or by using a standard `a` and then
-another code for the accent on top. This causes problems when mixing input
-from different sources, or using different computers - if your computer
-handles keyboard input in one form, but the content is stored in a different
-form, it will not match when searching, even though the end result appears
-identical.
+`á` 這樣的文字在電腦中有多種表示方法，比如使用一段程式碼來代表一個字母，或是在一個普通的 `a` 後面再附上一段程式碼來代表字母上的變音符號。當你從多個來源蒐集內容，或是使用不同電腦時，這會造成一些問題，比如搜尋時可能看起來是同一個字元，但卻找不到結果。
 
-To ensure content can easily be found in searches, Anki normalizes the text
-to a standard form. For most users this process is transparent, but if you
-are studying certain material like archaic Japanese symbols, the normalization
-process can end up converting them to a more modern equivalent.
+因此，Anki 會將文字統一。大部分使用者應對此過程無感，不過在少數情況下部分字元可能會在正規化時被轉換成其他字元。
 
-If you want character variants preserved, the following in the [debug console](./misc.md)
-will turn off normalization:
+若要保留多種儲存字元的方式，請在[除錯控制台](./misc.md)執行以下指令來停用正規化：
 
 ```python
 mw.col.conf["normalize_note_text"] = False
 ```
 
-Any content added after that will remain untouched. The trade-off is that you may
-find it difficult to search for the content if you're switching between operating
-systems, or pasting content from mixed sources.
+指令執行成功後，新增的內容都不會被正規化。但未來若更換作業系統，或將不同來源蒐集到 Anki 貼上，則可能無法直接搜尋到結果。
