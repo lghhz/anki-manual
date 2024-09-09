@@ -164,7 +164,7 @@
 <p>現在你已經找到需要的牌組，或自己加入了一些筆記，是時候開始學習了。</p>
 <h2 id="牌組-decks"><a class="header" href="#牌組-decks">牌組 Decks</a></h2>
 <p>在 Anki 中，你只能學習一個當前選取的牌組，以及牌組所包含的子牌組。</p>
-<p>牌組及下層牌組在牌組畫面中顯示為一個清單。當天的<a href="getting-started.html#%E5%8D%A1%E7%89%87%E7%A8%AE%E9%A1%9E-types-of-cards">「新卡片」、「學習中」和「已到期」（待複習）</a>的卡片也會在此顯示。</p>
+<p>牌組及子牌組在牌組畫面中顯示為一個清單。當天的<a href="getting-started.html#%E5%8D%A1%E7%89%87%E7%A8%AE%E9%A1%9E-types-of-cards">「新卡片」、「學習中」和「已到期」（待複習）</a>的卡片也會在此顯示。</p>
 <p><img src="media/decks_screen_zh-tw.png" alt="牌組畫面" /></p>
 <p>按下牌組後，它會被選取為「當前牌組」，並前往學習畫面。你隨時可以按一下主視窗上部的「牌組」(Decks) 回到牌組清單，選取其他牌組為當前牌組。（你也可以使用選單中的「學習牌組…」(Study Deck…) 動作，這樣只用鍵盤就能切換；你還可以按下<kbd>s</kbd>鍵來開始學習當前選取的牌組）</p>
 <p>按一下牌組右邊的設定按鈕，可以對它重新命名或刪除、更改<a href="deck-options.html">選項</a>，或將其<a href="exporting.html">匯出</a>。</p>
@@ -179,7 +179,7 @@
 <p>卡片一開始只會顯示問題面。經過思考得出答案後，你可以按一下「<strong>顯示答案</strong>」(Show Answer) 按鈕或空白鍵，答案就會顯示出來。雖然多花一點時間答題也沒有關係，但一般如果在 10 秒內答不出來，最好是直接放棄並檢查答案，不要埋頭苦想。</p>
 <p>顯示答案後，你應該對比自己想出來的和顯示的答案，然後選擇你的記憶水平。如果你沒把握自己校對答案，也可以請 Anki 在顯示答案之前<a href="templates/fields.html#%E6%AA%A2%E6%9F%A5%E7%AD%94%E6%A1%88-checking-your-answer">讓你輸入答案</a>。</p>
 <h2 id="學習重新學習-learningrelearning-cards"><a class="header" href="#學習重新學習-learningrelearning-cards">學習/重新學習 Learning/Relearning Cards</a></h2>
-<p>學習中的新卡片，或忘記後重新學習中的卡片，會顯示一或多次來讓你記住。卡片每一次出現就稱作一個「學習階段」(learning step)。預設有兩個學習階段：1 分鐘和 10 分鐘。你可以在<a href="deck-options.html#%E6%96%B0%E5%8D%A1%E7%89%87-new-cards">牌組選項</a>中調整學習階段的數量和時間延遲。</p>
+<p>學習中的新卡片，或遺忘後重新學習中的卡片，會顯示一或多次來讓你記住。卡片每一次出現就稱作一個「學習階段」(learning step)。預設有兩個學習階段：1 分鐘和 10 分鐘。你可以在<a href="deck-options.html#%E6%96%B0%E5%8D%A1%E7%89%87-new-cards">牌組選項</a>中調整學習階段的數量和時間延遲。</p>
 <p>學習時有四個評價按鈕可選擇：</p>
 <ul>
 <li>
@@ -207,7 +207,7 @@
 <p>複習學過的卡片時，你可以選擇一個評價按鈕：</p>
 <ul>
 <li>
-<p><strong>重來 (Again)</strong> 表示回答錯誤，卡片未來將更常出現。即卡片被忘記 (lapse) 了。請參閱〈<a href="deck-options.html#%E5%BF%98%E8%A8%98-lapses">忘記</a>〉章節來進一步了解 Anki 如何處理忘記的複習卡。</p>
+<p><strong>重來 (Again)</strong> 表示回答錯誤，卡片未來將更常出現。即卡片被遺忘 (lapse) 了。請參閱〈<a href="deck-options.html#%E9%81%BA%E5%BF%98-lapses">遺忘</a>〉章節來進一步了解 Anki 如何處理遺忘的複習卡。</p>
 </li>
 <li>
 <p><strong>困難 (Hard)</strong> 預設會比上一次的間隔<a href="deck-options.html#%E5%9B%B0%E9%9B%A3%E9%96%93%E9%9A%94-hard-interval">稍微更長一些</a>，增加卡片未來出現的頻率。</p>
@@ -224,7 +224,7 @@
 <h2 id="到期數量-due-counts"><a class="header" href="#到期數量-due-counts">到期數量 Due Counts</a></h2>
 <p>當只顯示問題時，Anki 畫面底部會顯示三個數字，如 6 + 9 + 59。這三個數字代表新卡片（藍色），學習中的卡片（紅色），以及待複習的卡片（綠色）。如果不想看到這些數字，可以在<a href="preferences.html">偏好設定</a>中停用。</p>
 <p><img src="media/due_counts.png" alt="Due Counts" /></p>
-<p>在 v1 排程器中，數字表示的是完成佇列中所有卡片所需的<strong>複習</strong>次數，而不是<strong>卡片</strong>數量。如果你為忘記的卡片設定了多個學習階段，則在回答失敗時，增加數字會大於 1，因為該卡片需要顯示多次。</p>
+<p>在 v1 排程器中，數字表示的是完成佇列中所有卡片所需的<strong>複習</strong>次數，而不是<strong>卡片</strong>數量。如果你為遺忘的卡片設定了多個學習階段，則在回答失敗時，增加數字會大於 1，因為該卡片需要顯示多次。</p>
 <p><a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 排程器</a>以後，數字表示的是<strong>卡片</strong>數量，因此數字永遠只會增加 1，即使還剩餘多個學習階段。</p>
 <p>顯示答案時，Anki 會在每個按鈕上方顯示下一次顯示卡片的預估時間。如果不想看到預估時間，可以在<a href="preferences.html">偏好設定</a>中停用。</p>
 <h2 id="錯差乘數-fuzz-factor"><a class="header" href="#錯差乘數-fuzz-factor">錯差乘數 Fuzz Factor</a></h2>
@@ -235,7 +235,7 @@
 <p>右下方的「<strong>其他</strong>」按鈕提供了更多可為當前卡片或筆記執行的動作。</p>
 <ul>
 <li>
-<p><a href="editing.html#using-flags"><strong>為卡片加上旗標 Flag Card</strong></a>：為卡片加上一個有顏色的標記，或將其移除。旗標會在學習時顯示，在瀏覽器中也可以搜尋加上了旗標的卡片。如果你想要回家後再查詢單字，或是對卡片進行其他動作，旗標就是你的小幫手。在 Anki 2.1.45 及以上版本，你還可以在<a href="browsing.html">瀏覽器</a>中重新命名旗標。</p>
+<p><a href="editing.html#%E4%BD%BF%E7%94%A8%E6%97%97%E6%A8%99-using-flags"><strong>為卡片加上旗標 Flag Card</strong></a>：為卡片加上或移除一個以顏色區分的標記。旗標會在學習時顯示，在瀏覽器中也可以搜尋加上了旗標的卡片。現在在忙想晚點再詳細查詢一個單字？你可以先給它加上旗標。在 Anki 2.1.45 及以上版本，你還可以在<a href="browsing.html">瀏覽器</a>中重新命名旗標。</p>
 </li>
 <li>
 <p><strong>暫停卡片/筆記 Bury Card / Note</strong>：停止複習一張卡片或一則筆記中的所有卡片，第二天再複習。（若要提前取消暫停，可以在<a href="studying.html#%E5%AD%B8%E7%BF%92%E6%A6%82%E8%A6%BD-study-overview">學習概覽</a>畫面按一下「取消暫停」按鈕）。若你當下無法回答某些卡片，或想改時間再學習，則可以使用此動作。暫停也可以<a href="studying.html#%E9%97%9C%E8%81%AF%E5%8D%A1%E7%89%87%E5%92%8C%E6%9A%AB%E5%81%9C-siblings-and-burying">自動套用</a>到同一則筆記的卡片。</p>
@@ -244,8 +244,8 @@
 </li>
 <li>
 <p><strong>忘記卡片 Forget card</strong>：移動當前卡片到<a href="browsing.html#cards">新卡片佇列末尾</a>。</p>
-<p>在 Anki 2.1.50 及以上版本中，當使用 v3 排程器首次學習新卡片時，Anki 會記住卡片的原始順序。在忘記卡片時可使用「回復原始順序」(Restore original position) 選項來回復卡片到原始順序。</p>
-<p>如果啟用「重設重複和忘記次數」(Reset repetition and lapse count) 選項，卡片的複習和失敗次數將被重設為零。卡片資訊底部的複習歷史記錄不會被移除。</p>
+<p>在 Anki 2.1.50 及以上版本中，當使用 v3 排程器首次學習新卡片時，Anki 會記住卡片的原始順序。在遺忘卡片時可使用「回復原始順序」(Restore original position) 選項來回復卡片到原始順序。</p>
+<p>如果啟用「重設重複和遺忘次數」(Reset repetition and lapse count) 選項，卡片的複習和失敗次數將被重設為零。卡片資訊底部的複習歷史記錄不會被移除。</p>
 </li>
 <li>
 <p><strong>設定到期日 Set Due Date</strong>：將卡片加入複習佇列，並<a href="browsing.html#cards">使其在指定日期到期</a>。</p>
@@ -289,21 +289,21 @@
 </li>
 </ul>
 <h2 id="顯示順序-display-order"><a class="header" href="#顯示順序-display-order">顯示順序 Display Order</a></h2>
-<p>學習時，顯示的卡片會從你選取的牌組及其下層牌組中抽取。因此，若選取學習「日文」牌組，則其下層牌組「日文::課本::第一課」和「日文::單字」也會一併顯示。</p>
+<p>學習時，顯示的卡片會從你選取的牌組及其子牌組中抽取。因此，若選取學習「日文」牌組，則其子牌組「日文::課本::第一課」和「日文::單字」也會一併顯示。</p>
 <p>Anki 從牌組中擷取卡片的方式取決於使用的演算法：</p>
 <ul>
 <li>
-<p>使用 v1 排程器時，若牌組有下層牌組，卡片則<a href="studying.html#%E9%A1%AF%E7%A4%BA%E9%A0%86%E5%BA%8F-display-order">依各牌組順序</a>出現。</p>
+<p>使用 v1 排程器時，若牌組有子牌組，卡片則<a href="studying.html#%E9%A1%AF%E7%A4%BA%E9%A0%86%E5%BA%8F-display-order">依各牌組順序</a>出現。</p>
 </li>
 <li>
-<p>使用 <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 排程器</a>時，若牌組有下層牌組，則會從所有下層牌組中抽取卡片。下層牌組的複習上限將被無視——僅套用你選取學習的牌組的上限。</p>
+<p>使用 <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 排程器</a>時，若牌組有子牌組，則會從所有子牌組中抽取卡片。子牌組的複習上限將被無視——僅套用你選取學習的牌組的上限。</p>
 </li>
 <li>
-<p>使用 <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 排程器</a>時，下層牌組的上限也會被納入計算，也不需要依牌組順序來顯示卡片。請參閱〈<a href="deck-options.html#%E7%89%8C%E7%B5%84%E9%81%B8%E9%A0%85-review-sort-order">牌組選項</a>〉章節來進一步了解。</p>
+<p>使用 <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 排程器</a>時，子牌組的上限也會被納入計算，也不需要依牌組順序來顯示卡片。請參閱〈<a href="deck-options.html#%E7%89%8C%E7%B5%84%E9%81%B8%E9%A0%85-review-sort-order">牌組選項</a>〉章節來進一步了解。</p>
 </li>
 </ul>
-<p>根據預設，Anki 在擷取新卡片時將依牌組名稱的字母/筆劃數順序擷取。在上述例子中，你會先看到上層牌組「日文」的卡片，然後下層牌組則以筆劃數順序先顯示「單字」再顯示「課本」。若你的牌組是「French」、「French::Vocab」和「French::My Textbook::Lesson 1」，顯示順序則為「French」→「My Textbook」→「Vocab」。你可以利用這個特性來控制卡片出現的順序，把優先級高的卡片放入在清單中靠上的牌組。 依字母順序排序時，「-」會出現在字母前，「~」會出現在字母後。因此，若要讓牌組排在最前面，你可以把它命名為「-Vocab」；要讓另一個牌組排在最後則可以把它命名為「~My Textbook」。</p>
-<p>Anki 會分開擷取新卡片和複習卡，當其中一個佇列空白時不會等到另一個佇列也空白再前進到下一個牌組，所以你可能會在學習牌組 A 的複習卡的同時學到牌組 B 的新卡片，反之亦同。如果不想發生這樣的情況，你可以直接選取要單獨學習的牌組，而不是它的上層牌組。</p>
+<p>根據預設，Anki 在擷取新卡片時將依牌組名稱的字母/筆劃數順序擷取。在上述例子中，你會先看到父牌組「日文」的卡片，然後子牌組則以筆劃數順序先顯示「單字」再顯示「課本」。若你的牌組是「French」、「French::Vocab」和「French::My Textbook::Lesson 1」，顯示順序則為「French」→「My Textbook」→「Vocab」。你可以利用這個特性來控制卡片出現的順序，把優先級高的卡片放入在清單中靠上的牌組。 依字母順序排序時，「-」會出現在字母前，「~」會出現在字母後。因此，若要讓牌組排在最前面，你可以把它命名為「-Vocab」；要讓另一個牌組排在最後則可以把它命名為「~My Textbook」。</p>
+<p>Anki 會分開擷取新卡片和複習卡，當其中一個佇列空白時不會等到另一個佇列也空白再前進到下一個牌組，所以你可能會在學習牌組 A 的複習卡的同時學到牌組 B 的新卡片，反之亦同。如果不想發生這樣的情況，你可以直接選取要單獨學習的牌組，而不是它的父牌組。</p>
 <p>由於學習中的卡片需要按時完成，Anki 會同時從所有牌組中擷取這些卡片，並依到期順序顯示。</p>
 <p>要控制特定牌組的複習卡顯示順序，或將新卡片改為隨機順序出現，請參閱《<a href="deck-options.html">牌組選項</a>》。要對新卡片的順序微調，請在<a href="browsing.html">瀏覽器</a>中進行調整。</p>
 <h2 id="關聯卡片和暫停-siblings-and-burying"><a class="header" href="#關聯卡片和暫停-siblings-and-burying">關聯卡片和暫停 Siblings and Burying</a></h2>
@@ -315,7 +315,7 @@
 <p>另外，卡片無法同時被暫停和擱置。當你擱置卡片時，若卡片已被暫停，則會將它取消暫停。Anki 2.1.49 及以上版本中無法暫停已擱置的卡片，在較早版本中則會將卡片取消擱置。</p>
 <h2 id="快速鍵-keyboard-shortcuts"><a class="header" href="#快速鍵-keyboard-shortcuts">快速鍵 Keyboard Shortcuts</a></h2>
 <p>Anki 中大多數的常用動作都可以使用快速鍵來操作。其中大多可在介面中找到：選單項目旁邊標有快速鍵，將滑鼠遊標懸停在按鈕上通常會顯示含有快速鍵的工具提示。</p>
-<p>在學習時，按下<kbd>空白</kbd>鍵或<kbd>Enter</kbd> 鍵會顯示答案。顯示答案時，按下<kbd>空白</kbd>鍵或<kbd>Enter</kbd> 鍵會選取「良好」按鈕。使用數字鍵 <kbd>1</kbd> 至 <kbd>4</kbd> 可以選取不同難度的按鈕。許多使用者都覺得比較方便的用法是一隻手指放在<kbd>空白</kbd>鍵上來回答大多數卡片，另一隻手指放在 <kbd>1</kbd> 鍵上，忘記卡片時就能按下「重來」。</p>
+<p>在學習時，按下<kbd>空白</kbd>鍵或<kbd>Enter</kbd> 鍵會顯示答案。顯示答案時，按下<kbd>空白</kbd>鍵或<kbd>Enter</kbd> 鍵會選取「良好」按鈕。使用數字鍵 <kbd>1</kbd> 至 <kbd>4</kbd> 可以選取不同難度的按鈕。比如你可以一隻手指放在<kbd>空白</kbd>鍵上來回答大多數卡片，另一隻手指放在 <kbd>1</kbd> 鍵上，遺忘卡片時就能按下「重來」。</p>
 <p>藥使用鍵盤來快速切換牌組，你可以使用「工具」選單中的「學習牌組」項目。你可以使用「/」鍵來切換。打開「學習牌組」後，視窗中會顯示你的所有牌組，上方還有一個篩選器。輸入文字，Anki 就會隨之篩選你的牌組。你可以加入空白來輸入多個搜尋詞彙，Anki 會顯示符合所有詞彙的牌組。搜尋「日 單」或「字 日」都會符合名為「日文::單字」的牌組。</p>
 <h2 id="進度落後-falling-behind"><a class="header" href="#進度落後-falling-behind">進度落後 Falling Behind</a></h2>
 <p>當你的複習進度落後時，Anki 會優先顯示等待時間最長的卡片。等待時間最長的卡片會以隨機順序顯示，直至達到複習上限。這樣的順序可以確保沒有卡片會被長時間遺漏，但同時會導致你新學習的卡片不會被複習到，直到你趕上進度。</p>
