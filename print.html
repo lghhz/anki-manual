@@ -1677,7 +1677,7 @@ onclick=&quot;this.style.display='none';document.getElementById('hint4753594160'
 <p>因此，在辭典連結或類似的情形中可能會出現問題。依上述例子，辭典連結可能會變成：</p>
 <pre><code>&lt;a href=&quot;http://example.com/search?q=&lt;b&gt;word&lt;/b&gt;&quot;&gt;檢索辭典&lt;/a&gt;
 </code></pre>
-<p>因為多出了「<b>」等無關字元，在辭典中很可能搜尋不到任何結果。</p>
+<p>因為多出了「&lt;b&gt;」等無關字元，在辭典中很可能搜尋不到任何結果。</p>
 <p>為了解決這一問題，Anki 提供了在取代時清除欄位格式的功能。只要在欄位名稱前輸入「text:」，Anki 就會清除所有格式。依以下格式設定連結，即便欄位文字存在格式也能正常搜尋：</p>
 <pre><code>&lt;a href=&quot;http://example.com/search?q={{text:單字}}&quot;&gt;檢索辭典&lt;/a&gt;
 </code></pre>
