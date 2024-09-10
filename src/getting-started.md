@@ -147,7 +147,7 @@ Anki 會在你建立新集合時自動加入一些基本的筆記類型。這些
 - **基本型（含反向卡片） Basic (and reversed card)**  
   在基本型的基礎上增加了一張方向相反的卡片，即建立兩張卡片：正面→背面，背面→正面。
 
-- **基本型（可選用反向卡片） Basic (optional reversed card)** 
+- **基本型（選擇性反向卡片） Basic (optional reversed card)** 
   建立一張「正面→背面」卡片，並可選擇是否建立「背面→正面」卡片。只要在筆記類型的第三個欄位「加入反向卡片」中輸入任意文字，便會建立一張反向卡片。請參閱《[卡片和模板](templates/intro.md)》來進一步了解。
 
 - **基本型（輸入答案） Basic (type in the answer)** 
