@@ -209,10 +209,7 @@
 | `世[よ]の 中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby>                |
 | `世[よ]の中[なか]`  | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby>（錯誤用法）    |
 
-Notice how the third example has a space before the 中 character. This is
-necessary to specify that the ruby text applies only to that character.
-If there was no space, the ruby text will be misplaced above the の character,
-as shown in the fourth example.
+注意第 2 個例子中的「獺」和第 4 個例子中的「中」前面都有一個半形空格。這是為了表示注音應顯示在空格後的文字上方。如未加入空格，則會像第 3 和第 5 個例子中那樣，「ㄊ」可能會跑到「水」上面，而「な」可能會顯示在「の」上面。
 
 ### 其他注音篩選器 Additional Ruby Character Filters
 
@@ -221,13 +218,13 @@ as shown in the fourth example.
 <!-- prettier-ignore -->
 | 原文             | 欄位篩選器               | 顯示效果                                       |
 | --------------- | ---------------------- | --------------------------------------------- |
-| `日本語[にほんご]` | `{{furigana:MyField}}` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby>   |
-| `日本語[にほんご]` | `{{kana:MyField}}`     | にほんご                                       |
-| `日本語[にほんご]` | `{{kanji:MyField}}`    | 日本語                                         |
+| `日本語[にほんご]` | `{{furigana:欄位名稱}}` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby>   |
+| `日本語[にほんご]` | `{{kana:欄位名稱}}`     | にほんご                                       |
+| `日本語[にほんご]` | `{{kanji:欄位名稱}}`    | 日本語                                         |
 
 ## 媒體檔與 LaTeX 方程式 Media & LaTeX
 
-因速度所限，Anki 不會掃描模板有無引用媒體檔。因此在模板上直接加入媒體會導致一些後果。
+因執行速度所限，Anki 不會掃描模板有無引用媒體檔。因此在模板上直接加入媒體會導致一些後果。
 
 ### 靜態音檔/影像 Static Sounds/Images
 
@@ -243,18 +240,15 @@ as shown in the fourth example.
 
 ### 引用欄位 Field References
 
-Media references to fields are not supported. They may or may not display
-during review, and will not work when checking for unused media,
-importing/exporting, and so on. Examples that won’t work:
+媒體引用中不能包含欄位取代。問題有：複習時可能無法正常顯示、檢查未被使用的媒體檔無法被偵測到、無法正常匯出/匯入等。無法正常運作的例子：
 
-    <img src="{{Expression}}.jpg">
+    <img src="{{單字}}.jpg">
 
-    [sound:{{Word}}]
+    [sound:{{例句}}]
 
-    [latex]{{Field 1}}[/latex]
+    [latex]{{欄位一}}[/latex]
 
-Instead, you should include the media references in the field. Please
-see the [importing section](../importing/text-files.md#importing-media) for more information.
+請將媒體引用放入欄位內容。請參閱〈[匯入媒體檔](../importing/text-files.md#匯入媒體檔-importing-media)〉章節來進一步了解。
 
 ## 檢查答案 Checking Your Answer
 
@@ -277,7 +271,7 @@ see the [importing section](../importing/text-files.md#importing-media) for more
 
 在要檢查的欄位前加入 `type:`。因為背面模板有「FrontSide」欄位，所以無需再次加入 `{{type:英文}}`。
 
-在複習畫面中，Anki會顯示一個文字框，輸入答案後按下 <kbd>Enter</kbd> 鍵或顯示答案按鈕後，Anki 會對比你給出的答案和正確答案。文字框的字型大小是你在「欄位」編輯畫面中設定的大小。
+複習畫面中將會顯示一個文字框，輸入答案後按下 <kbd>Enter</kbd> 鍵或顯示答案按鈕後，Anki 會對比你給出的答案和正確答案。文字框的字型大小是你在「欄位」編輯畫面中設定的大小。
 
 答案檢查結果僅供參考，你可以依實際情況自由選擇評價按紐。
 
@@ -291,7 +285,7 @@ see the [importing section](../importing/text-files.md#importing-media) for more
 
     <code id=typeans>...</code>
 
-進階使用者還可以使用 CSS class 「typeGood」、「typeBad」和「typeMissed」來覆蓋預設的檢查結果文字顏色。AnkiMobile 支援「typeGood」和「typeBad」兩個 class，但不支援「typeMissed」。
+進階使用者還可以使用 CSS class「typeGood」、「typeBad」和「typeMissed」來覆蓋預設的檢查結果文字顏色。AnkiMobile 支援「typeGood」和「typeBad」兩個 class，但不支援「typeMissed」。
 
 要覆蓋文字框的字型大小但不更改「欄位」對話框中的設定，你可以使用 `!important` 來覆蓋預設的行內 (inline) 樣式：
 
