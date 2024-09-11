@@ -244,12 +244,12 @@
 {{/空白時新增}}
 </code></pre>
 <p>但版本較舊的 Anki 會無視這條否定條件式，因此是否產生卡片僅取決於「正面」欄位是否為空。</p>
-<p>在條件中混合使用邏輯<strong>且 (AND)</strong> 和<strong>或 (OR)</strong> 也會在較舊版本中造成問題。這是一個能正常運作的例子（若「A」<strong>或</strong>「B」<strong>或</strong>「C」不為空，則新增卡片）：</p>
+<p>在條件中混合使用邏輯<strong>且 (AND)</strong> 和<strong>或 (OR)</strong> 也會在較舊版本中造成問題。這是一個能正常運作的例子（若 A<strong>或</strong>B<strong>或</strong>C 不為空，則新增卡片）：</p>
 <pre><code>{{A}}
 {{B}}
 {{C}}
 </code></pre>
-<p>這是另一個能正常運作的例子（若「A」<strong>且</strong>「B」<strong>且</strong>「C」不為空，則新增卡片）：</p>
+<p>這是另一個能正常運作的例子（若 A<strong>且</strong>B<strong>且</strong>C 不為空，則新增卡片）：</p>
 <pre><code>{{#A}}
     {{#B}}
         {{#C}}
@@ -258,7 +258,7 @@
     {{/B}}
 {{/A}}
 </code></pre>
-<p>但以下混用了邏輯<strong>且</strong>和<strong>或</strong>的例子（若「A」<strong>或</strong>（「B」<strong>且</strong>「C」）不為空，則新增卡片）則無法正常運作：</p>
+<p>但以下混用了邏輯<strong>且</strong>和<strong>或</strong>的例子（若 A<strong>或</strong>(B<strong>且</strong>C) 不為空，則新增卡片）則無法正常運作：</p>
 <pre><code>{{A}}
 {{#B}}
     {{#C}}

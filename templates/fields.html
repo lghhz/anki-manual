@@ -323,21 +323,18 @@ onclick=&quot;this.style.display='none';document.getElementById('hint4753594160'
 <tr><td><code>世[よ]の中[なか]</code></td><td><ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby>（錯誤用法）</td></tr>
 </tbody></table>
 </div>
-<p>Notice how the third example has a space before the 中 character. This is
-necessary to specify that the ruby text applies only to that character.
-If there was no space, the ruby text will be misplaced above the の character,
-as shown in the fourth example.</p>
+<p>注意第 2 個例子中的「獺」和第 4 個例子中的「中」前面都有一個半形空格。這是為了表示注音應顯示在空格後的文字上方。如未加入空格，則會像第 3 和第 5 個例子中那樣，「ㄊ」可能會跑到「水」上面，而「な」可能會顯示在「の」上面。</p>
 <h3 id="其他注音篩選器-additional-ruby-character-filters"><a class="header" href="#其他注音篩選器-additional-ruby-character-filters">其他注音篩選器 Additional Ruby Character Filters</a></h3>
 <p>除了振假名篩選器 <code>furigana</code>，你還可以選擇只顯示注音或原文。使用假名篩選器 <code>kana</code> 時將只顯示注音，使用漢字篩選器 <code>kanji</code> 則會移除注音。</p>
 <!-- prettier-ignore -->
 <div class="table-wrapper"><table><thead><tr><th>原文</th><th>欄位篩選器</th><th>顯示效果</th></tr></thead><tbody>
-<tr><td><code>日本語[にほんご]</code></td><td><code>{{furigana:MyField}}</code></td><td><ruby><rb>日本語</rb><rt>にほんご</rt></ruby></td></tr>
-<tr><td><code>日本語[にほんご]</code></td><td><code>{{kana:MyField}}</code></td><td>にほんご</td></tr>
-<tr><td><code>日本語[にほんご]</code></td><td><code>{{kanji:MyField}}</code></td><td>日本語</td></tr>
+<tr><td><code>日本語[にほんご]</code></td><td><code>{{furigana:欄位名稱}}</code></td><td><ruby><rb>日本語</rb><rt>にほんご</rt></ruby></td></tr>
+<tr><td><code>日本語[にほんご]</code></td><td><code>{{kana:欄位名稱}}</code></td><td>にほんご</td></tr>
+<tr><td><code>日本語[にほんご]</code></td><td><code>{{kanji:欄位名稱}}</code></td><td>日本語</td></tr>
 </tbody></table>
 </div>
 <h2 id="媒體檔與-latex-方程式-media--latex"><a class="header" href="#媒體檔與-latex-方程式-media--latex">媒體檔與 LaTeX 方程式 Media &amp; LaTeX</a></h2>
-<p>因速度所限，Anki 不會掃描模板有無引用媒體檔。因此在模板上直接加入媒體會導致一些後果。</p>
+<p>因執行速度所限，Anki 不會掃描模板有無引用媒體檔。因此在模板上直接加入媒體會導致一些後果。</p>
 <h3 id="靜態音檔影像-static-soundsimages"><a class="header" href="#靜態音檔影像-static-soundsimages">靜態音檔/影像 Static Sounds/Images</a></h3>
 <p>要在每張卡片上都加入同樣的音檔或影像：</p>
 <ol>
@@ -352,17 +349,14 @@ as shown in the fourth example.</p>
 <pre><code>&lt;img src=&quot;_logo.jpg&quot;&gt;
 </code></pre>
 <h3 id="引用欄位-field-references"><a class="header" href="#引用欄位-field-references">引用欄位 Field References</a></h3>
-<p>Media references to fields are not supported. They may or may not display
-during review, and will not work when checking for unused media,
-importing/exporting, and so on. Examples that won’t work:</p>
-<pre><code>&lt;img src=&quot;{{Expression}}.jpg&quot;&gt;
+<p>媒體引用中不能包含欄位取代。問題有：複習時可能無法正常顯示、檢查未被使用的媒體檔無法被偵測到、無法正常匯出/匯入等。無法正常運作的例子：</p>
+<pre><code>&lt;img src=&quot;{{單字}}.jpg&quot;&gt;
 
-[sound:{{Word}}]
+[sound:{{例句}}]
 
-[latex]{{Field 1}}[/latex]
+[latex]{{欄位一}}[/latex]
 </code></pre>
-<p>Instead, you should include the media references in the field. Please
-see the <a href="../importing/text-files.html#importing-media">importing section</a> for more information.</p>
+<p>請將媒體引用放入欄位內容。請參閱〈<a href="../importing/text-files.html#%E5%8C%AF%E5%85%A5%E5%AA%92%E9%AB%94%E6%AA%94-importing-media">匯入媒體檔</a>〉章節來進一步了解。</p>
 <h2 id="檢查答案-checking-your-answer"><a class="header" href="#檢查答案-checking-your-answer">檢查答案 Checking Your Answer</a></h2>
 <p>要檢查你的答案，最簡單的方式是使用「基本型（輸入答案）」筆記類型。</p>
 <p>若要修改已有筆記類型，假設你的模板如下：</p>
@@ -379,7 +373,7 @@ see the <a href="../importing/text-files.html#importing-media">importing section
 {{type:英文}}
 </code></pre>
 <p>在要檢查的欄位前加入 <code>type:</code>。因為背面模板有「FrontSide」欄位，所以無需再次加入 <code>{{type:英文}}</code>。</p>
-<p>在複習畫面中，Anki會顯示一個文字框，輸入答案後按下 <kbd>Enter</kbd> 鍵或顯示答案按鈕後，Anki 會對比你給出的答案和正確答案。文字框的字型大小是你在「欄位」編輯畫面中設定的大小。</p>
+<p>複習畫面中將會顯示一個文字框，輸入答案後按下 <kbd>Enter</kbd> 鍵或顯示答案按鈕後，Anki 會對比你給出的答案和正確答案。文字框的字型大小是你在「欄位」編輯畫面中設定的大小。</p>
 <p>答案檢查結果僅供參考，你可以依實際情況自由選擇評價按紐。</p>
 <p>一張卡片只能加入一個文字對比。加入多個 <code>{{type:欄位}}</code> 將無法正常運作。文字框只能顯示為一行，因此不適合用於包含多行文字的欄位。</p>
 <p>答案檢查結果使用等寬字型，這樣你輸入的答案和正確答案中的字母可以一一對齊。若要覆蓋使用的字型，請在樣式表底部加入：</p>
@@ -388,7 +382,7 @@ see the <a href="../importing/text-files.html#importing-media">importing section
 <p>加入的程式碼會影響答案檢查結果的 HTML 原始碼：</p>
 <pre><code>&lt;code id=typeans&gt;...&lt;/code&gt;
 </code></pre>
-<p>進階使用者還可以使用 CSS class 「typeGood」、「typeBad」和「typeMissed」來覆蓋預設的檢查結果文字顏色。AnkiMobile 支援「typeGood」和「typeBad」兩個 class，但不支援「typeMissed」。</p>
+<p>進階使用者還可以使用 CSS class「typeGood」、「typeBad」和「typeMissed」來覆蓋預設的檢查結果文字顏色。AnkiMobile 支援「typeGood」和「typeBad」兩個 class，但不支援「typeMissed」。</p>
 <p>要覆蓋文字框的字型大小但不更改「欄位」對話框中的設定，你可以使用 <code>!important</code> 來覆蓋預設的行內 (inline) 樣式：</p>
 <pre><code>#typeans { font-size: 50px !important; }
 </code></pre>
