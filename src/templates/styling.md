@@ -239,7 +239,7 @@ Anki 定義了一些特殊的 CSS class，可為不同平台設定不同的樣�
 
 如果你在公司/學校電腦上使用 Anki，沒有權限安裝字型，或是使用行動裝置，不便安裝字型，你可以在 Anki 中加入字型檔。
 
-Anki 僅支援 TrueType 字型格式。TrueType 字型的附檔名為 `.ttf`，如 `Arial.ttf`。找到想要的字型檔後，請新增至 Anki 媒體檔資料夾：
+Anki 僅支援加入 TrueType 格式的字型。TrueType 字型的附檔名為 `.ttf`，如 `Arial.ttf`。找到想要的字型檔後，請新增至 Anki 媒體檔資料夾：
 
 1. 重新命名檔案，在開頭加上一條底線，如 `_arial.ttf`。檔名開頭的底線表示檔案用於模板中，這樣在 Anki 中執行「檢查媒體檔」時就不會被刪除。
 
@@ -288,50 +288,16 @@ Anki 僅支援 TrueType 字型格式。TrueType 字型的附檔名為 `.ttf`，�
 }
 ```
 
-## Fading and Scrolling
+## 捲動 Scrolling
 
-Anki will automatically scroll to the answer by default. It looks for an
-HTML element with id=answer, and scrolls to that. You can place the id
-on a different element to adjust the scrolling position, or remove the
-id=answer to turn off scrolling.
+根據預設，Anki 會透過 `id=answer` 來找到包含答案的 HTML 元素，並在卡片背面自動捲動到這個元素。你可以把 `id=answer` 移動至其他 HTML 元素上來改變自動捲動的終點，或移除 `id=answer` 以停用自動捲動。
 
-The question side of a card fades in by default. If you wish to adjust
-this delay, you can place the following at the top of your front card
-template:
+## JavaScript
 
-```html
-<script>
-  qFade = 100;
-  if (typeof anki !== "undefined") anki.qFade = qFade;
-</script>
-```
+因為 Anki 卡片本質上就是網頁，所以你也可以透過模板來在卡片上嵌入 JavaScript。請參閱[此論壇貼文](https://forums.ankiweb.net/t/card-templates-user-input-101-buttons-keyboard-shortcuts-etc-guide/13756)來進一步了解。
 
-100 (milliseconds) is the default; set to 0 to disable fading.
+JavaScript 是一項進階功能，容易出現錯誤，因此 **Anki 不為 JavaScript 功能提供支援**。我們無法協助你編寫 JavaScript 程式碼，也無法保證當前可用的程式碼在未來不會失效。若無法自行解決相關問題，建議不要使用 JavaScript。
 
-## Javascript
+不同 Anki 用戶端上的卡片顯示效果可能不一，因此你需要在不同平台上進行測試。多數用戶端的卡片是顯示在一個持續動態更新內容的網頁上，所以你的 JavaScript 程式碼需要使用 `document.getElementById()` 等方法來更新文件內容，而不是類似 `document.write()` 的方法。
 
-As Anki cards are treated like webpages, it is possible to embed some
-Javascript on your cards via the card template. For a good reference
-please read [this post](https://forums.ankiweb.net/t/card-templates-user-input-101-buttons-keyboard-shortcuts-etc-guide/13756)
-in the forums.
-
-Because Javascript is an advanced feature and so many things can go
-wrong, **Javascript functionality is provided without any support or
-warranty**. We can not provide any assistance with writing Javascript,
-and can not guarantee any code you have written will continue to work
-without modification in future Anki updates. If you are not comfortable
-addressing any issues you encounter on your own, then please avoid using
-Javascript.
-
-Each Anki client may implement card display differently, so you will
-need to test the behaviour across platforms. A number of clients are
-implemented by keeping a long running webpage and dynamically updating
-parts of it as cards are reviewed, so your Javascript will need to
-update sections of the document using things like
-document.getElementById() rather than doing things like
-document.write().
-
-Functions like window.alert may not be available. Anki will write
-javascript errors to the terminal, so you'll need to [view the console](https://addon-docs.ankiweb.net/console-output.html#console-output) to
-see them. To debug issues with JavaScript, you can use Chrome's
-[inspector](https://addon-docs.ankiweb.net/debugging.html#webviews).
+`window.alert` 這樣的函式可能不可用。Anki 會在終端機寫入 JavaScript 錯誤，你需要在[控制台](https://addon-docs.ankiweb.net/console-output.html#console-output)中檢視錯誤訊息。你可以使用 Chrome 的「[檢查元素](https://addon-docs.ankiweb.net/debugging.html#webviews)」功能來為 JavaScript 程式碼偵錯。
