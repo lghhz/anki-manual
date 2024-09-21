@@ -1,4 +1,4 @@
-# 產生卡片 Card Generation
+# 產生卡片 [Card Generation](https://docs.ankiweb.net/templates/generation.html)
 
 <!-- toc -->
 

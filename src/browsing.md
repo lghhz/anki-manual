@@ -109,7 +109,7 @@ Above the card list is a search box. You can type in various things
 there to search for cards. For information on the search syntax,
 see [Searching](searching.md).
 
-## Card/Note Table
+## 卡片/筆記表格 Card/Note Table
 
 The table's rows represent cards or notes that match the current search.
 When you click on a row, the corresponding note will be shown in the bottom section.

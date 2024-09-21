@@ -1,4 +1,4 @@
-# 新手入門 Getting Started
+# 新手入門 [Getting Started](https://docs.ankiweb.net/getting-started.html)
 
 <!-- toc -->
 

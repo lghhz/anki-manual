@@ -1,4 +1,4 @@
-# 欄位取代 Field Replacements
+# 欄位取代 [Field Replacements](https://docs.ankiweb.net/templates/fields.html)
 
 <!-- toc -->
 

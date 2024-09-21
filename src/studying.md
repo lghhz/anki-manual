@@ -1,4 +1,4 @@
-# 學習 Studying
+# 學習 [Studying](https://docs.ankiweb.net/studying.html)
 
 <!-- toc -->
 

@@ -1,4 +1,4 @@
-# 新增/編輯 Adding/Editing
+# 新增/編輯 [Adding/Editing](https://docs.ankiweb.net/editing.html)
 
 <!-- toc -->
 
