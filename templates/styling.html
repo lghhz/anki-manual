@@ -191,7 +191,7 @@
   max-height: none;
 }
 </code></pre>
-<p>AnkiDroid 有時會<a href="https://github.com/ankidroid/Anki-Android/issues/3612">無法符合螢幕大小</a>。使用 CSS 設定影像最大長寬本應解決此問題，但 AnkiDroid 2.9 及較舊版本中會無視這一設定。你可以在行末加入 <code>!important</code> 來解決：</p>
+<p>AnkiDroid 有時會<a href="https://github.com/ankidroid/Anki-Android/issues/3612">無法符合螢幕大小</a>。使用 CSS 設定影像最大長寬本應解決這一問題，但 AnkiDroid 2.9 及較舊版本中會無視這一設定。你可以在行末加入 <code>!important</code> 來解決：</p>
 <pre><code class="language-css">img {
   max-width: 300px !important;
   max-height: 300px !important;
@@ -260,7 +260,7 @@
 <p>你也可以在牌組中加入自訂字型檔案，這樣你就不需要在電腦或手機上安裝只想要在 Anki 中使用的字型。請參閱〈<a href="#%E5%AE%89%E8%A3%9D%E5%AD%97%E5%9E%8B-installing-fonts">安裝字型</a>〉章節來進一步了解。</p>
 <h2 id="音訊播放按鈕-audio-replay-buttons"><a class="header" href="#音訊播放按鈕-audio-replay-buttons">音訊播放按鈕 Audio Replay Buttons</a></h2>
 <p>當卡片中有音訊或 TTS 時，Anki 會顯示一個播放按鈕。</p>
-<p>若不需要此按鈕，你可以在偏好設定中停用。</p>
+<p>若不需要這個按鈕，你可以在偏好設定中停用。</p>
 <p>你可以在卡片樣式表中自訂按鈕外觀。如果你要縮小按鈕並加上顏色，可以加入程式碼：</p>
 <pre><code class="language-css">.replay-button svg {
   width: 20px;
@@ -289,7 +289,7 @@
 <p>因 HTML 功能之多，此使用手冊無法一一涵蓋所有功能，請在網路上自行尋找 HTML 入門教學來進一步了解。</p>
 <h2 id="瀏覽器預覽樣式-browser-appearance"><a class="header" href="#瀏覽器預覽樣式-browser-appearance">瀏覽器預覽樣式 Browser Appearance</a></h2>
 <p>如果你的卡片模板過於複雜，<a href="../browsing.html#%E5%8D%A1%E7%89%87/%E7%AD%86%E8%A8%98%E8%A1%A8%E6%A0%BC-cardnote-table">卡片清單</a>中的問題欄（正面）和答案欄（背面）可能難以閱讀。透過「瀏覽器預覽樣式」，你可以自訂一個僅限瀏覽器中顯示的模板，比如只顯示重要的欄位或者改變顯示順序。「瀏覽器預覽樣式」使用與普通卡片模板相同的語法。</p>
-<p>使用此選項時，當問題面文字包含在答案面開頭時，答案欄中不會顯示問題。假如問題是「日本在」、答案是「日本在東亞」，則答案欄僅會顯示「東亞」。</p>
+<p>使用這個選項時，當問題面文字包含在答案面開頭時，答案欄中不會顯示問題。假如問題是「日本在」、答案是「日本在東亞」，則答案欄僅會顯示「東亞」。</p>
 <h2 id="平台特定-css-platform-specific-css"><a class="header" href="#平台特定-css-platform-specific-css">平台特定 CSS Platform-Specific CSS</a></h2>
 <p>Anki 定義了一些特殊的 CSS class，可為不同平台設定不同的樣式。例如，你可以像這樣在不同平台上顯示不同的字型：</p>
 <pre><code class="language-css">/* Windows */
@@ -328,13 +328,13 @@
 <p>如果你使用 AnkiWeb 複習卡片，你還可以使用 <code>.chrome</code>、<code>.gecko</code> 和 <code>.opera</code> 等 class 來在不同的瀏覽器中使用不同樣式。要檢視所有可用的 class，請參閱 <a href="http://rafael.adm.br/css_browser_selector/">http://rafael.adm.br/css_browser_selector/</a>。</p>
 <h2 id="安裝字型-installing-fonts"><a class="header" href="#安裝字型-installing-fonts">安裝字型 Installing Fonts</a></h2>
 <p>如果你在公司/學校電腦上使用 Anki，沒有權限安裝字型，或是使用行動裝置，不便安裝字型，你可以在 Anki 中加入字型檔。</p>
-<p>Anki 僅支援加入 TrueType 格式的字型。TrueType 字型的附檔名為 <code>.ttf</code>，如 <code>Arial.ttf</code>。找到想要的字型檔後，請新增至 Anki 媒體檔資料夾：</p>
+<p>Anki 僅支援加入 TrueType 格式的字型。TrueType 字型的副檔名為 <code>.ttf</code>，如 <code>Arial.ttf</code>。找到想要的字型檔後，請新增至 Anki 媒體檔資料夾：</p>
 <ol>
 <li>
 <p>重新命名檔案，在開頭加上一條底線，如 <code>_arial.ttf</code>。檔名開頭的底線表示檔案用於模板中，這樣在 Anki 中執行「檢查媒體檔」時就不會被刪除。</p>
 </li>
 <li>
-<p>在電腦上打開檔案瀏覽器，並前往 <a href="../files.html">Anki 資料夾</a>，打開你的設定檔資料夾（預設名稱為「使用者 1」）。</p>
+<p>打開電腦上的檔案瀏覽器，並前往 <a href="../files.html">Anki 資料夾</a>，打開你的設定檔資料夾（預設名稱為「使用者 1」）。</p>
 </li>
 <li>
 <p>將已重新命名的字型檔放入「collection.media」資料夾中。</p>

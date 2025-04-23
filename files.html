@@ -147,18 +147,18 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="managing-files-and-your-collection"><a class="header" href="#managing-files-and-your-collection">Managing Files and Your Collection</a></h1>
+                        <h1 id="管理檔案與集合-managing-files-and-your-collection-英文"><a class="header" href="#管理檔案與集合-managing-files-and-your-collection-英文">管理檔案與集合 <a href="https://docs.ankiweb.net/files.html">Managing Files and Your Collection <span style="font-size:18px;">(英文)</span></a></a></h1>
 <ul>
-<li><a href="#checking-your-collection">Checking Your Collection</a></li>
-<li><a href="#file-locations">File Locations</a></li>
-<li><a href="#startup-options">Startup Options</a></li>
-<li><a href="#dropbox-and-file-syncing">DropBox and File Syncing</a></li>
-<li><a href="#network-filesystems">Network Filesystems</a></li>
-<li><a href="#running-from-a-flash-drive">Running from a Flash Drive</a></li>
-<li><a href="#backups">Backups</a></li>
-<li><a href="#inaccessible-harddisk">Inaccessible Harddisk</a></li>
-<li><a href="#permissions-of-temp-folder">Permissions of Temp Folder</a></li>
-<li><a href="#corrupt-collections">Corrupt Collections</a>
+<li><a href="#%E6%AA%A2%E6%9F%A5%E9%9B%86%E5%90%88-checking-your-collection">檢查集合 Checking Your Collection</a></li>
+<li><a href="#%E6%AA%94%E6%A1%88%E4%BD%8D%E7%BD%AE-file-locations">檔案位置 File Locations</a></li>
+<li><a href="#%E5%95%9F%E5%8B%95%E9%81%B8%E9%A0%85-startup-options">啟動選項 Startup Options</a></li>
+<li><a href="#%E6%AA%94%E6%A1%88%E5%90%8C%E6%AD%A5-file-syncing">檔案同步 File Syncing</a></li>
+<li><a href="#%E7%B6%B2%E8%B7%AF%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-network-filesystems">網路檔案系統 Network Filesystems</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E9%9A%A8%E8%BA%AB%E7%A2%9F%E5%9F%B7%E8%A1%8C-running-from-a-flash-drive">使用隨身碟執行 Running from a Flash Drive</a></li>
+<li><a href="#%E5%82%99%E4%BB%BD-backups">備份 Backups</a></li>
+<li><a href="#%E7%84%A1%E6%B3%95%E5%AD%98%E5%8F%96%E7%A1%AC%E7%A2%9F-inaccessible-harddisk">無法存取硬碟 Inaccessible Harddisk</a></li>
+<li><a href="#%E6%9A%AB%E5%AD%98%E8%B3%87%E6%96%99%E5%A4%BE%E6%AC%8A%E9%99%90-permissions-of-temp-folder">暫存資料夾權限 Permissions of Temp Folder</a></li>
+<li><a href="#%E9%9B%86%E5%90%88%E6%90%8D%E6%AF%80-corrupt-collections">集合損毀 Corrupt Collections</a>
 <ul>
 <li><a href="#linuxmacos">Linux/macOS</a></li>
 <li><a href="#windows">Windows</a></li>
@@ -166,63 +166,34 @@
 </ul>
 </li>
 </ul>
-<h2 id="checking-your-collection"><a class="header" href="#checking-your-collection">Checking Your Collection</a></h2>
-<p>It is a good idea to occasionally check your collection file for
-problems. You can do this via the Tools&gt;Check Database menu item.
-Checking the database ensures the file has not been corrupted, rebuilds some
-internal structures, and optimizes the file.</p>
-<p>When you check the database, your tag list is also rebuilt. When you
-delete individual decks or cards, Anki does not update the list of used
-tags, as it's inefficient to do so. If you want to clear old tags out
-from the list that are no longer in use, checking your database is the
-way to do it.</p>
-<p>Please note that Anki will automatically optimize your collection once
-every 2 weeks. This optimization ensures the collection performs well,
-but it does not check for errors or rebuild the tag list when
-automatically optimizing.</p>
-<h2 id="file-locations"><a class="header" href="#file-locations">File Locations</a></h2>
-<p>On <strong>Windows</strong>, the latest Anki versions store your Anki files in your
-appdata folder. You can access it by opening the file manager, and
-typing <code>%APPDATA%\Anki2</code> in the location field. Older versions of Anki
-stored your Anki files in a folder called <code>Anki</code> in your <code>Documents</code>
-folder.</p>
-<p>On <strong>Mac</strong> computers, recent Anki versions store all their files in the
-<code>~/Library/Application Support/Anki2</code> folder. The Library folder is
-hidden by default, but can be revealed in Finder by holding down the
-option key while clicking on the Go menu. If you're on an older Anki
-version, your Anki files will be in your <code>Documents/Anki</code> folder.</p>
-<p>On <strong>Linux</strong>, recent Anki versions store your data in
-<code>~/.local/share/Anki2</code>, or <code>$XDG_DATA_HOME/Anki2</code> if you have set a
-custom data path. Older versions of Anki stored your files in
-<code>~/Documents/Anki</code> or <code>~/Anki</code>.</p>
-<p>Within the Anki folder, the program-level and profile-level preferences
-are stored in a file called prefs.db.</p>
-<p>There is also a separate folder for each profile. The folder contains:</p>
+<h2 id="檢查集合-checking-your-collection"><a class="header" href="#檢查集合-checking-your-collection">檢查集合 Checking Your Collection</a></h2>
+<p>你可以定期使用工具選單中的「檢查資料庫」功能來檢查集合檔，防止檔案損毀、重建部分內部架構以及最佳化檔案。</p>
+<p>在 Anki 中刪除牌組或卡片時，標籤不會自動刪除。使用「檢查資料庫」時，你的標籤清單也會被重建，清理不再被使用的標籤。</p>
+<p>Anki 每兩週會自動最佳化你的集合來改善效能。但自動最佳化不會檢查錯誤或重建標籤清單。</p>
+<h2 id="檔案位置-file-locations"><a class="header" href="#檔案位置-file-locations">檔案位置 File Locations</a></h2>
+<p><strong>Windows</strong>：較新版本的 Anki 檔案儲存在 <code>appdata</code> 資料夾中。你可以在檔案總管的網址列中輸入 <code>%APPDATA%\Anki2</code> 來打開。較舊版本的 Anki 檔案儲存在 <code>文件\Anki</code> 資料夾中。</p>
+<p><strong>Mac</strong>：較新版本的 Anki 檔案儲存在 <code>~/Library/Application Support/Anki2</code> 資料夾中。<code>資源庫(Library)</code> 資料夾預設是隱藏的。要打開 <code>資源庫</code>，請在 Finder 按住 Option 鍵，然後選擇「前往」&gt;「資源庫」。較舊版本的 Anki 檔案儲存在 <code>文件/Anki</code> 資料夾中。</p>
+<p><strong>Linux</strong>：較新版本的 Anki 檔案儲存在 <code>~/.local/share/Anki2</code> 資料夾中，若你設定了自訂資料路徑則會在 <code>$XDG_DATA_HOME/Anki2</code> 資料夾中。較舊版本的 Anki 檔案儲存在
+<code>~/Documents/Anki</code> 或 <code>~/Anki</code>資料夾中。</p>
+<p>在 Anki 資料夾裡，程式檔案與設定檔層級的偏好設定儲存在 <code>prefs.db</code> 檔案中。</p>
+<p>每個設定檔都儲存在單獨的資料夾內。設定檔資料夾包含：</p>
 <ul>
 <li>
-<p>Your notes, decks, cards and so on in a file called collection.anki2</p>
+<p>筆記、牌組、卡片等，儲存在 <code>collection.anki2</code> 檔案中</p>
 </li>
 <li>
-<p>Your audio and images in a collection.media folder</p>
+<p>音訊和影像，儲存在 <code>collection.media</code> 資料夾中</p>
 </li>
 <li>
-<p>A backups folder</p>
+<p>備份資料夾</p>
 </li>
 <li>
-<p>Some system files</p>
+<p>系統檔案</p>
 </li>
 </ul>
-<p>You should never copy or move your collection while Anki is open. Doing
-so could cause your collection to become corrupt. Please do not move or
-modify the other files in the folder either.</p>
-<h2 id="startup-options"><a class="header" href="#startup-options">Startup Options</a></h2>
-<p>If you have made a destructive change on one computer and have an
-undamaged copy on another computer, you may wish to start Anki without
-syncing in order to use the full sync option without first downloading
-the changes. Similarly, if you are experiencing problems with Anki, you
-might want to (or might be instructed to) disable add-ons temporarily to
-see if one might be causing the problem. You can do both of these things
-by holding down the <kbd>Shift</kbd> key while starting Anki.</p>
+<p>Anki 執行時，請勿修改、複製或移動檔案，否則可能會造成集合等檔案損毀。</p>
+<h2 id="啟動選項-startup-options"><a class="header" href="#啟動選項-startup-options">啟動選項 Startup Options</a></h2>
+<p>如果你一台電腦上的集合損毀了，但另一台電腦的集合完好，你可以在打開 Anki 時按住  <kbd>Shift</kbd> 鍵來略過自動同步，然後再使用單向同步（完整同步）選項。另外，按住 <kbd>Shift</kbd> 鍵還可以暫時停用附加元件，當附加元件出現錯誤時可以避免發生更多問題。</p>
 <p>It is possible to specify a custom folder location during startup. This
 is an advanced feature that is primarily intended to be used with
 portable installations, and we recommend you use the default location in
@@ -266,63 +237,37 @@ On Windows, you can define the environment variable with:</p>
 <p>On Linux and macOS, you can use:</p>
 <pre><code>export ANKI_BASE=&quot;/path/to/AnkiDataFolder&quot;
 </code></pre>
-<h2 id="dropbox-and-file-syncing"><a class="header" href="#dropbox-and-file-syncing">DropBox and File Syncing</a></h2>
-<p>We do not recommend you sync your Anki folder directly with a
-third-party synchronization service, as it can lead to database
-corruption when files are synced while in use.</p>
-<p>If you just want to synchronize your media, you can link external
-folders into services like DropBox. Please see <a href="http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders">DropboxWiki: Sync
-Folders Outside Dropbox (archive.org)</a>
-for more info.</p>
-<p>If you wish to keep your collection in sync as well, it is strongly
-recommended that you create a script that copies your files from your
-synced folder to a local folder, launches Anki, and then copies the
-files back when Anki is closed. This will ensure that the files are
-never synchronized while they are open.</p>
-<h2 id="network-filesystems"><a class="header" href="#network-filesystems">Network Filesystems</a></h2>
-<p>We strongly recommend you have Anki store your files on a local hard
-disk, as network filesystems can lead to database corruption. If a
-network filesystem is your only option, regular use of Tools&gt;Check
-Database to detect corruption is recommended.</p>
-<h2 id="running-from-a-flash-drive"><a class="header" href="#running-from-a-flash-drive">Running from a Flash Drive</a></h2>
-<p>On Windows, Anki can be installed on a USB / flash drive and run as a
-portable application. The following example assumes your USB drive is
-drive G.</p>
+<h2 id="檔案同步-file-syncing"><a class="header" href="#檔案同步-file-syncing">檔案同步 File Syncing</a></h2>
+<p>使用第三方同步服務來同步 Anki 資料夾可能會造成資料庫損毀。</p>
+<p>如果僅需同步媒體檔，你可以將外部資料夾連結至媒體檔資料夾中。</p>
+<p>若要使用第三方服務來同步集合檔，建議建立指令碼，在打開 Anki 時複製雲端檔案到本機資料夾，關閉時再複製回去。</p>
+<h2 id="網路檔案系統-network-filesystems"><a class="header" href="#網路檔案系統-network-filesystems">網路檔案系統 Network Filesystems</a></h2>
+<p>使用網路檔案系統可能會造成資料庫損毀。如果必須使用網路檔案系統，請定期使用「檢查資料庫」工具來檢查有無損毀。</p>
+<h2 id="使用隨身碟執行-running-from-a-flash-drive"><a class="header" href="#使用隨身碟執行-running-from-a-flash-drive">使用隨身碟執行 Running from a Flash Drive</a></h2>
+<p>在 Windows 上，你可以在隨身碟中安裝 Anki 為可攜式軟體。以下步驟假設你的隨身碟為 G 槽。</p>
 <ul>
 <li>
-<p>Copy the \Program Files\Anki folder to the flash drive, so you
-have a folder like G:\Anki.</p>
+<p>複製 <code>\Program Files\Anki</code> 資料夾到隨身碟上，變成 <code>G:\Anki</code>。</p>
 </li>
 <li>
-<p>Create a text file called G:\anki.bat with the following text:</p>
-<p>g:\anki\anki.exe -b g:\ankidata</p>
+<p>建立一個文字檔，命名為 <code>G:\anki.bat</code>，內容為：</p>
+<p><code>g:\anki\anki.exe -b g:\ankidata</code></p>
 </li>
 </ul>
-<p>If you would like to prevent the black command prompt window from
-remaining open, you can instead use:</p>
+<p>如果不想要看見開啟時的命令列視窗，請將內容改為：</p>
 <pre><code>start /b g:\anki\anki.exe -b g:\ankidata
 </code></pre>
 <ul>
-<li>Double-clicking on anki.bat should start Anki with the user data
-stored in G:\ankidata.</li>
+<li>按兩下 <code>anki.bat</code> 來啟動 Anki，使用者資料儲存於 <code>G:\ankidata</code>。</li>
 </ul>
-<p>The full path including drive letter is required - if you try using
-<code>\anki\anki.exe</code> instead you will find syncing stops working.</p>
-<p>Media syncing with AnkiWeb may not work if your flash drive is formatted
-as FAT32. Please format the drive as NTFS to ensure media syncs
-correctly.</p>
-<h2 id="backups"><a class="header" href="#backups">Backups</a></h2>
-<p>Please see <a href="./backups.html">this section</a>.</p>
-<h2 id="inaccessible-harddisk"><a class="header" href="#inaccessible-harddisk">Inaccessible Harddisk</a></h2>
-<p>If Anki can't write to files in the <a href="#file-locations">Anki folder</a>, a message
-will be displayed on startup saying that Anki can't write to the
-harddisk, and Anki will close. If you're unsure how to fix the
-permissions, please contact someone near you who is knowledgeable about
-computers and can help you out.</p>
-<h2 id="permissions-of-temp-folder"><a class="header" href="#permissions-of-temp-folder">Permissions of Temp Folder</a></h2>
-<p>Anki uses the system's temporary folder to store temporary data. If the
-permissions of this folder have been changed from the default settings
-by a rogue app or buggy antivirus app, Anki will not function properly.</p>
+<p>不能去除磁碟機代號，輸入 <code>\anki\anki.exe</code> 時將無法同步。</p>
+<p>FAT32 格式的隨身碟可能無法同步媒體檔。請將隨身碟格式化為 NTFS 以確保能正常同步。</p>
+<h2 id="備份-backups"><a class="header" href="#備份-backups">備份 Backups</a></h2>
+<p>請參閱〈<a href="./backups.html">備份</a>〉。</p>
+<h2 id="無法存取硬碟-inaccessible-harddisk"><a class="header" href="#無法存取硬碟-inaccessible-harddisk">無法存取硬碟 Inaccessible Harddisk</a></h2>
+<p>啟動時，如果 <a href="#file-locations">Anki 資料夾</a>無法寫入， Anki 將顯示一則訊息並自動關閉。如果不清楚如何修正存取權限，請求助電腦專家。</p>
+<h2 id="暫存資料夾權限-permissions-of-temp-folder"><a class="header" href="#暫存資料夾權限-permissions-of-temp-folder">暫存資料夾權限 Permissions of Temp Folder</a></h2>
+<p>Anki 使用系統暫存資料夾來暫時儲存檔案。如果這個資料夾的權限被某些軟體（如防毒軟體）更動，Anki 將無法正常運作。</p>
 <p>If you're on a Windows 7 machine, the general steps to fix the problem
 are listed below. As this is somewhat complicated, please ask someone
 knowledgeable about Windows if you are not sure.</p>
@@ -348,11 +293,8 @@ default W7 install the control will actually be inherited from
 c:\users\your-username.</p>
 </li>
 </ol>
-<h2 id="corrupt-collections"><a class="header" href="#corrupt-collections">Corrupt Collections</a></h2>
-<p>Anki uses a file format that is robust against program and computer
-crashes, but it's still possible for your collection to become corrupt
-if the files are modified while Anki is open, stored on a network drive,
-or corrupted by a bug.</p>
+<h2 id="集合損毀-corrupt-collections"><a class="header" href="#集合損毀-corrupt-collections">集合損毀 Corrupt Collections</a></h2>
+<p>Anki 使用的檔案格式通常不會在程式或電腦崩潰時受到太大的影響，但在少數情況下，集合還是有可能會損毀，比如檔案在 Anki 執行時被修改、檔案儲存在雲端硬碟或程式錯誤。</p>
 <p>When you run Tools&gt;Check Database, you will receive a message if Anki
 detects the file has been corrupted. <strong>The best way to recover from this
 is to restore from the most recent <a href="#backups">automatic backup</a></strong>, but
