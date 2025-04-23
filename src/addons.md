@@ -1,6 +1,6 @@
-# 附加元件 [Add-ons](https://docs.ankiweb.net/addons.html)
+# 附加元件 [Add-ons <span style="font-size:18px;">(英文)</span>](https://docs.ankiweb.net/addons.html)
 
-安裝附加元件可以為 Anki 加入更多功能。附加元件可以加入更多特定語言支援、進階排程控制等等。
+你可以為 Anki 安裝附加元件來加入更多功能，如更多語言支援、進階排程控制等。
 
 要檢視可用的附加元件清單，請前往「工具」>「附加元件」，然後按一下「取得附加元件」。或者你也可以直接在瀏覽器中打開 [ankiweb.net/shared/addons](https://ankiweb.net/shared/addons)。
 

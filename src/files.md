@@ -1,4 +1,4 @@
-# 管理檔案與集合 [Managing Files and Your Collection](https://docs.ankiweb.net/files.html)
+# 管理檔案與集合 [Managing Files and Your Collection <span style="font-size:18px;">(英文)</span>](https://docs.ankiweb.net/files.html)
 
 <!-- toc -->
 

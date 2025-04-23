@@ -1,4 +1,4 @@
-# 新增/編輯 [Adding/Editing](https://docs.ankiweb.net/editing.html)
+# 新增/編輯 [Adding/Editing <span style="font-size:18px;">(英文)</span>](https://docs.ankiweb.net/editing.html)
 
 <!-- toc -->
 

@@ -1,4 +1,4 @@
-# 新手入門 [Getting Started](https://docs.ankiweb.net/getting-started.html)
+# 新手入門 [Getting Started <span style="font-size:18px;">(英文)</span>](https://docs.ankiweb.net/getting-started.html)
 
 <!-- toc -->
 

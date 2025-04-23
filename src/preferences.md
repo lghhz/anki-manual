@@ -1,4 +1,4 @@
-# 偏好設定 [Preferences](https://docs.ankiweb.net/preferences.html)
+# 偏好設定 [Preferences <span style="font-size:18px;">(英文)</span>](https://docs.ankiweb.net/preferences.html)
 
 <!-- toc -->
 

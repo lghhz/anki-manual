@@ -1,4 +1,4 @@
-# 設定檔 [Profiles](https://docs.ankiweb.net/profiles.html)
+# 設定檔 [Profiles <span style="font-size:18px;">(英文)</span>](https://docs.ankiweb.net/profiles.html)
 
 如果有多人要在同一台電腦上使用 Anki，各個使用者可以自己建立一個設定檔。各設定檔的集合和程式設定互不影響，但會共用安裝的附加元件。你可以在「檔案」選單中選擇「切換設定檔」來管理設定檔。
 

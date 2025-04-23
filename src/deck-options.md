@@ -405,7 +405,7 @@ The options are:
 - Bury review siblings: whether other review cards of the same note will be delayed until the next day.
 - Bury interday learning siblings: whether other learning cards of the same note with intervals >= 1 day will be delayed until the next day.
 
-For more info about burying cards, please see [this section](./studying.md#關聯卡片和暫停-siblings-and-burying) of the manual.
+For more info about burying cards, please see [this section](./studying.md#關聯卡片和推遲-siblings-and-burying) of the manual.
 
 ## Audio
 

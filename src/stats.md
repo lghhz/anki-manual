@@ -1,12 +1,10 @@
-# Card Info, Graphs and Statistics
+# 卡片資訊、圖表和統計 Card Info, Graphs and Statistics
 
 <!-- toc -->
 
-## Card Info
+## 卡片資訊 Card Info
 
-You can display information about a card by using the Cards&gt;Info menu item,
-by right-clicking on the card and then selecting **Info**, or by pressing
-<kbd>I</kbd> on the review screen.
+要檢視卡片資訊，你可以右鍵按一下卡片，在選單中選取「卡片資訊」，或在複習畫面按下 <kbd>I</kbd> 鍵。
 
 ![Card Info](media/card_info.png)
 

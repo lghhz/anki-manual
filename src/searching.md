@@ -238,7 +238,7 @@ reviews (both due and not due) and lapsed cards.
 cards that have been [automatically](leeches.md) or manually suspended.
 
 `is:buried`\
-cards that have been buried, either [automatically](studying.md#關聯卡片和暫停-siblings-and-burying) or
+cards that have been buried, either [automatically](studying.md#關聯卡片和推遲-siblings-and-burying) or
 manually
 
 Cards that have [lapsed](deck-options.md#遺忘-lapses) fall into several of the previous categories, so it may
