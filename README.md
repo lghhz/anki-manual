@@ -1,6 +1,6 @@
-建議前往網站查看： https://anki-manual-zh-tw.github.io/anki-manual/
+建議前往網站查看： https://lghhz.github.io/anki-manual/
 
-Best viewed on the website: https://anki-manual-zh-tw.github.io/anki-manual/
+Best viewed on the website: https://lghhz.github.io/anki-manual/
 
 This manual is licensed under the CC BY-SA 4 license:
 

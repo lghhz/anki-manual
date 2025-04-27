@@ -2,83 +2,65 @@
 
 <!-- toc -->
 
-Anki's Browse screen and the Filtered Deck feature use a common method
-of searching for specific cards/notes. This method can also be used to adjust the scope of FSRS optimization. 
+在 Anki 中，瀏覽畫面和篩選牌組使用相同的方法進行搜尋。同樣的方法也可以用來調整 FSRS 最佳化範圍。
 
 ## 簡單搜尋 Simple searches
 
-When you type some text into the search box, Anki finds matching notes
-and displays their cards. Anki searches in all fields of the notes, but
-does not search for tags (see [later in this section](#tags-decks-cards-and-notes) to search for tags). Some examples:
+在搜尋方塊中輸入文字後，Anki 將尋找所有筆記欄位，並顯示符合的卡片。搜尋結果不包含標籤。（請見[後文](#tags-decks-cards-and-notes)來了解如何搜尋標籤）以下是一些搜尋條件範例：
 
 `dog`\
-searches for "dog" - will match words like "doggy" and "underdog" too.
+搜尋「dog」——也會符合類似「doggy」和「underdog」的字。
 
 `dog cat`\
-finds notes that have both "dog" and "cat" on them, such as "raining
-cats and dogs".
+搜尋同時包含「dog」和「cat」的筆記，如「raining cats and dogs」。
 
 `dog or cat`\
-finds notes with either "dog" or "cat".
+搜尋至少包含「dog」和「cat」其一的筆記。
 
 `dog (cat or mouse)`\
-finds notes with "dog" and "cat", or "dog" and "mouse".
+搜尋包含「dog」，且至少包含「cat」和「mouse」其一的筆記。即同時包含「dog」和「cat」或者同時包含「dog」和「mouse」。
 
 `-cat`\
-finds notes without "cat".
+搜尋不包含「cat」的筆記。
 
 `-cat -mouse`\
-finds notes with neither "cat" nor "mouse".
+搜尋既不包含「cat」，也不包含「mouse」的筆記。
 
 `-(cat or mouse)`\
-same as the above.
+同上。
 
 `"a dog"`\
-finds notes with the exact sequence of characters "a dog" in them, such
-as "atta dog", but not "dog a" or "adog".
+搜尋包含「a dog」的筆記，如「atta dog」。而「dog a」或「adog」則不符合條件。
 
 `-"a dog"`\
-finds notes without the exact sequence of characters "a dog" in them.
+搜尋不包含「a dog」的筆記。
 
 `d_g`\
-finds notes with d, &lt;one character&gt;, g, like dog, dig, dug, and so on.
+尋找包含「d, &lt;一個字元&gt;, g」的筆記，如「dog」、「dig」、「dug」等。
 
 `d*g`\
-finds notes with d, &lt;zero or more characters&gt;, g, like dg, dog, dung,
-etc.
+尋找包含「d, &lt;零或多個字元&gt;, g」的筆記，如「dg」、「dog」、「dung」等。
 
 `w:dog`\
-searches for the word "dog" as opposed to a sequence of characters - will match "dog", but not "doggy"
-or "underdog". Requires Anki 2.1.24+, AnkiMobile 2.1.61+, or AnkiDroid 2.17+. Note that
-formatting changes may be interpreted as word boundaries, e.g. searching
-for `w:exam` will match **exam**ple, as the "exam" part of example is in bold format.
+搜尋單字「dog」，而不是 d, o, g 三個字元——即「dog」會符合搜尋條件，但「doggy」、「underdog」不會。僅限 Anki 2.1.24+、AnkiMobile 2.1.61+ 或 AnkiDroid 2.17+ 版本。文字格式可能改變單字邊界，例如，搜尋 `w:exam` 時將會符合「**exam**ple」，因為「exam」包含在粗體格式中。
 
 `w:dog*`\
-will match "dog" and "doggy", but not "underdog".
+符合「dog」和「doggy」，但不符合「underdog」。
 
 `w:*dog`\
-will match "dog" and "underdog", but not "doggy".
+符合「dog」和「underdog」，但不符合「doggy」。
 
-Things to note from the above:
+以上需要注意：
 
-- Search terms are separated by spaces.
+- 搜尋條件應以空白分隔。
 
-- When multiple search terms are provided, Anki looks for notes that
-  match all of the terms - an implicit `and` is inserted between each
-  term. On Anki 2.1.24+, AnkiMobile 2.0.60+, and AnkiDroid 2.17+ you can be explicit
-  if you like (`dog and cat` is the same as `dog cat`), but older
-  Anki versions will treat `and` as just another word to search for.
+- 輸入多個搜尋條件時，Anki 將尋找符合所有條件的筆記——默認在每個條件之間加入 `and`。在 Anki 2.1.24+、AnkiMobile 2.1.60+ 及 AnkiDroid 2.17+ 版本中，你也可以輸入這條 `and`（`dog and cat` 等於 `dog cat`），但在較早版本中，`and` 會被視為一個正常的單字進行搜尋。
 
-- You can use `or` if you only need one of the terms to match.
+- 如果僅需筆記符合一個條件，你可以使用 `or`。
 
-- You can prepend a minus sign (`-`) to a term to find notes that don’t
-  match the term.
+- 你可以在搜尋條件前加入一個半形連字號 (`-`) 來搜尋不符合這個條件的筆記。
 
-- You can group search terms by placing them in parentheses, as in the
-  `dog (cat or mouse)` example. This becomes important when
-  combining OR and AND searches — in the example, with the
-  parentheses, it matches either "dog cat" or "dog mouse", whereas
-  without them it would match either "dog and cat" or "mouse".
+- 你可以用半形括號來對搜尋條件分組。這一做法在混用 `and` 和 `or` 時尤為重要，例如，上文範例中的 `dog (cat or mouse)` 將符合「dog cat」或「dog mouse」，若去掉括號，搜尋條件將變成「dog and cat」或「mouse」。
 
 - Anki is only able to search within formatting in the [sort field](editing.md#自訂欄位-customizing-fields) you’ve configured. For example, if you add
   "**exa**mple" to one of your fields, with the "exa" part in bold, this will not be matched when

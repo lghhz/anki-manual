@@ -1,0 +1,18 @@
+- **note 筆記**
+- **card 卡片**
+- **collection 集合**
+- **again 重來**
+- **hard 困難**
+- **good 良好**
+- **easy 簡單**
+- **field 欄位**
+- **note type 筆記類型**：由欄位及卡片類型組成
+- **card type 卡片類型**：由正面和背面兩個模板組成
+- **template 模板**
+- **bury 推遲**（舊譯暫停）：暫停卡片一天
+- **suspend 擱置**：無限期暫停卡片
+- **(learning) step （學習）階段**
+- **leech 低效卡**（舊譯榨時卡）
+- **gather 收集**：從牌組中抽取新卡片至學習佇列
+- **retention/retrievability 留存機率**
+- **stability 穩固期**

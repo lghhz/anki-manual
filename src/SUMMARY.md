@@ -54,6 +54,7 @@
 - [Troubleshooting](troubleshooting.md)
 - [Sync Server](sync-server.md)
 - [Miscellaneous](misc.md)
+- [詞彙對照表 Glossary](glossary.md)
 
 [Contributing](contrib.md)
 [常見問題 FAQs](faqs.md)
